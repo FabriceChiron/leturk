@@ -1,0 +1,111 @@
+@keyframes animate-home-1 {
+  0% {
+    opacity: 0;
+  }
+
+  // 7.5s
+  12.5% {
+    opacity: 1;
+  }
+
+  // 15s
+  25% {
+    opacity: 1;
+  }
+
+  // 30s
+  50% {
+    opacity: 0;
+    background-position: 50% 25%;
+  }
+
+  // 60s
+  100% { 
+    opacity: 0;
+  }
+}
+
+@keyframes animate-home-2 {
+  0% {
+    opacity: 0;
+  }
+
+  // 7.5s
+  12.5% {
+    opacity: 1;
+  }
+
+  // 15s
+  25% {
+    opacity: 1;
+  }
+
+  // 30s
+  50% {
+    opacity: 0;
+    background-position: 50% 25%;
+  }
+
+  // 60s
+  100% { 
+    opacity: 0;
+  }
+}
+
+@keyframes animate-home-3 {
+  0% {
+    opacity: 0;
+  }
+
+  // 7.5s
+  12.5% {
+    opacity: 1;
+  }
+
+  // 15s
+  25% {
+    opacity: 1;
+  }
+
+  37.5% {
+    opacity: 1;
+    background-position: 25% 0%;
+  }
+
+  // 30s
+  50% {
+    opacity: 0;
+  }
+
+  // 60s
+  100% { 
+    opacity: 0;
+  }
+}
+
+@keyframes animate-home-4 {
+  0% {
+    opacity: 0;
+  }
+
+  // 7.5s
+  12.5% {
+    opacity: 1;
+  }
+
+  // 15s
+  25% {
+    opacity: 1;
+  }
+
+  // 30s
+  50% {
+    opacity: 0;
+    background-position: 75% 50%;
+  }
+
+  // 60s
+  100% { 
+    opacity: 0;
+  }
+}

@@ -1,0 +1,1223 @@
+{
+  "content" : {
+    "categories" : [
+      {
+        "id": "series",
+        "name": "Séries",
+        "type": "photos",
+        "collection" : [
+          {
+            "id" : "les-machines-absurdes",
+            "name" : "Les Machines Absurdes",
+            "cover" : {
+
+            },
+            "photos": [
+              {
+                "file": "anh1",
+                "title": "Anh 1"
+              },
+              {
+                "file": "anh2",
+                "title": "Anh 2"
+              },
+              {
+                "file": "saint-michel",
+                "title": "Saint-Michel"
+              }
+            ]
+          },
+          {
+            "id" : "la-garenne-du-prince",
+            "name" : "La Garenne du Prince",
+            "cover" : {
+
+            },
+            "photos": [
+              {
+                "file": "alexandre-1",
+                "title": "Alexandre 1"
+              },
+              {
+                "file": "alexandre-2",
+                "title": "Alexandre 2"
+              },
+              {
+                "file": "alexandre-3",
+                "title": "Alexandre 3"
+              },
+              {
+                "file": "cinema",
+                "title": "Cinema"
+              },
+              {
+                "file": "haloween-1",
+                "title": "Haloween 1"
+              },
+              {
+                "file": "haloween-2",
+                "title": "Haloween 2"
+              },
+              {
+                "file": "haloween-3",
+                "title": "Haloween 3"
+              },
+              {
+                "file": "haloween-4",
+                "title": "Haloween 4"
+              },
+              {
+                "file": "haloween-5",
+                "title": "Haloween 5"
+              },
+              {
+                "file": "le-manoir-1",
+                "title": "Le Manoir 1"
+              },
+              {
+                "file": "le-manoir-2",
+                "title": "Le Manoir 2"
+              },
+              {
+                "file": "le-manoir-3",
+                "title": "Le Manoir 3"
+              },
+              {
+                "file": "le-manoir-4",
+                "title": "Le Manoir 4"
+              },
+              {
+                "file": "les-automates_1",
+                "title": "Les Automates 1"
+              },
+              {
+                "file": "les-automates_2",
+                "title": "Les Automates 2"
+              },
+              {
+                "file": "les-automates_3",
+                "title": "Les Automates 3"
+              },
+              {
+                "file": "les-automates_4",
+                "title": "Les Automates 4"
+              },
+              {
+                "file": "les-automates_5",
+                "title": "Les Automates 5"
+              },
+              {
+                "file": "les-automates_6",
+                "title": "Les Automates 6"
+              },
+              {
+                "file": "les-automates_7",
+                "title": "Les Automates 7"
+              },
+              {
+                "file": "les-automates_adam-et-eve",
+                "title": "Les Automates - Adam et Eve"
+              },
+              {
+                "file": "nautilus-1",
+                "title": "Nautilus 1"
+              },
+              {
+                "file": "nautilus-2",
+                "title": "Nautilus 2"
+              },
+              {
+                "file": "nautilus-3",
+                "title": "Nautilus 3"
+              },
+              {
+                "file": "nautilus-4",
+                "title": "Nautilus 4"
+              },
+              {
+                "file": "nautilus-5",
+                "title": "Nautilus 5"
+              },
+              {
+                "file": "nautilus-6",
+                "title": "Nautilus 6"
+              },
+              {
+                "file": "nautilus-7",
+                "title": "Nautilus 7"
+              },
+              {
+                "file": "nautilus-8",
+                "title": "Nautilus 8"
+              },
+              {
+                "file": "oups",
+                "title": "Oups"
+              },
+              {
+                "file": "quarantaine-1",
+                "title": "Quarantaine 1"
+              },
+              {
+                "file": "quarantaine-2",
+                "title": "Quarantaine 2"
+              },
+              {
+                "file": "taxi",
+                "title": "Taxi"
+              }
+            ]
+          },
+          {
+            "id" : "ode-a-metz",
+            "name" : "Ode A Metz",
+            "cover" : {
+
+            },
+            "photos": [
+              {
+                "file": "europa",
+                "title": "Europa"
+              },
+              {
+                "file": "finsdesiecles",
+                "title": "Fin de Siècle"
+              },
+              {
+                "file": "guillaume",
+                "title": "Guillaume"
+              },
+              {
+                "file": "lafonderie1",
+                "title": "La Fonderie 1"
+              },
+              {
+                "file": "laura",
+                "title": "Laura"
+              },
+              {
+                "file": "lechevalier",
+                "title": "Le Chevalier"
+              },
+              {
+                "file": "legraoully",
+                "title": "Le Graoully"
+              },
+              {
+                "file": "leroi",
+                "title": "Le Roi"
+              },
+              {
+                "file": "lesforges2",
+                "title": "Les Forges 2"
+              },
+              {
+                "file": "lesforges3",
+                "title": "Les Forges 3"
+              },
+              {
+                "file": "ruetaison",
+                "title": "Rue Taison"
+              },
+              {
+                "file": "venus",
+                "title": "Venus"
+              },
+              {
+                "file": "venusenmoselle",
+                "title": "Venus en Moselle"
+              }
+            ]
+          },
+          {
+            "id" : "opera-mundi",
+            "name" : "Opera Mundi",
+            "cover" : {
+
+            },
+            "photos": [
+              {
+                "file": "01_eccehomo",
+                "title": "Ecce Homo"
+              },
+              {
+                "file": "02_credo",
+                "title": "Credo"
+              },
+              {
+                "file": "03_surladernierefrontiere",
+                "title": "Sur la Dernière Frontière"
+              },
+              {
+                "file": "04_latentationdesaintantoine",
+                "title": "La Tentation de Saint Antoine"
+              },
+              {
+                "file": "05_lacreation",
+                "title": "La Création"
+              }
+            ]
+          },
+          {
+            "id" : "entree-des-artistes",
+            "name" : "Entrée des Artistes",
+            "cover" : {
+
+            },
+            "photos": [
+              {
+                "file": "entree-des-artistes-01",
+                "title": ""
+              },
+              {
+                "file": "entree-des-artistes-02",
+                "title": ""
+              },
+              {
+                "file": "entree-des-artistes-03",
+                "title": ""
+              },
+              {
+                "file": "entree-des-artistes-04",
+                "title": ""
+              },
+              {
+                "file": "entree-des-artistes-05",
+                "title": ""
+              },
+              {
+                "file": "entree-des-artistes-06",
+                "title": ""
+              },
+              {
+                "file": "entree-des-artistes-07",
+                "title": ""
+              },
+              {
+                "file": "entree-des-artistes-08",
+                "title": ""
+              },
+              {
+                "file": "entree-des-artistes-09",
+                "title": ""
+              },
+              {
+                "file": "entree-des-artistes-10",
+                "title": ""
+              },
+              {
+                "file": "entree-des-artistes-11",
+                "title": ""
+              }
+            ]
+          },
+          {
+            "id" : "la-chute-des-empires",
+            "name" : "La Chute des Empires",
+            "cover" : {
+
+            },
+            "photos": [
+              {
+                "file": "01_lacommune",
+                "title": "La Commune"
+              },
+              {
+                "file": "02_letombeaudessirenes",
+                "title": "Le Tombeau des Sirènes"
+              },
+              {
+                "file": "03_lesoiseauxmetalliques",
+                "title": "Les Oiseaux Métalliques"
+              },
+              {
+                "file": "04_lesamanites",
+                "title": "Les Amanites"
+              },
+              {
+                "file": "05_lamortdudouglas",
+                "title": "La Mort du Douglas"
+              }
+            ]
+          },
+          {
+            "id" : "romance-et-series-b",
+            "name" : "Romances et Séries B",
+            "cover" : {
+
+            },
+            "photos": [
+              {
+                "file": "01_ulrikeetblablabla",
+                "title": "Ulrik et Blablabla"
+              },
+              {
+                "file": "02_dedos",
+                "title": "De Dos"
+              },
+              {
+                "file": "03_frenchtoast",
+                "title": "French Toast"
+              },
+              {
+                "file": "04_frenchtoast2",
+                "title": "French Toast 2"
+              },
+              {
+                "file": "05_frenchtoast3",
+                "title": "French Toast 3"
+              },
+              {
+                "file": "06_hoteldumidi2",
+                "title": "Hotel du Midi 2"
+              },
+              {
+                "file": "07_hoteldumidi",
+                "title": "Hotel du Midi"
+              },
+              {
+                "file": "08_hoteldumidi3",
+                "title": "Hotel du Midi 3"
+              },
+              {
+                "file": "09_fraise",
+                "title": "Fraise"
+              },
+              {
+                "file": "10_breakfastinhell",
+                "title": "Breakfast in Hell"
+              },
+              {
+                "file": "11_lecoeurvolcan",
+                "title": "Le coeur volcan"
+              },
+              {
+                "file": "12_sarah",
+                "title": "Sarah"
+              },
+              {
+                "file": "13_leya",
+                "title": "Leya"
+              },
+              {
+                "file": "14_lepalace",
+                "title": "Le Palace"
+              },
+              {
+                "file": "15_nowhere",
+                "title": "Nowhere"
+              },
+              {
+                "file": "16_sanservolo",
+                "title": "Sanservolo"
+              },
+              {
+                "file": "17_sanservolo2",
+                "title": "Sanservolo 2"
+              },
+              {
+                "file": "18_sanservolo3",
+                "title": "Sanservolo 3"
+              },
+              {
+                "file": "badabim1",
+                "title": "Badabim 1"
+              },
+              {
+                "file": "badabim2",
+                "title": "Badabim 2"
+              },
+              {
+                "file": "badabim3",
+                "title": "Badabim 3"
+              },
+              {
+                "file": "badabim4",
+                "title": "Badabim 4"
+              }
+            ]
+          },
+          {
+            "id" : "je-crie-vers-toi",
+            "name" : "Je Crie Vers Toi",
+            "cover" : {
+
+            },
+            "photos": [
+              {
+                "file": "01_saintsebastien",
+                "title": "Saint Sebastien"
+              },
+              {
+                "file": "02_lepeuple",
+                "title": "Le Peuple"
+              },
+              {
+                "file": "03_lacrucifixion",
+                "title": "LA Crucifixion"
+              },
+              {
+                "file": "04_leprince",
+                "title": "Le Prince"
+              },
+              {
+                "file": "05_laguerre",
+                "title": "La Guerre"
+              }
+            ]
+          },
+          {
+            "id" : "le-chat-noir",
+            "name" : "Le Chat Noir",
+            "cover" : {
+
+            },
+            "photos": [
+              {
+                "file": "01_lechatnoir",
+                "title": "Le Chat Noir"
+              },
+              {
+                "file": "02_mara",
+                "title": "Mara"
+              },
+              {
+                "file": "03_maraetaudrey",
+                "title": "Mara et Audrey"
+              },
+              {
+                "file": "04_maraauparfum",
+                "title": "Mara au Parfum"
+              },
+              {
+                "file": "05_morganneagenoux",
+                "title": "Morganne à genoux"
+              },
+              {
+                "file": "06_lekimono",
+                "title": "Le Kimono"
+              },
+              {
+                "file": "07_lesailesdedyna",
+                "title": "Les AIles de Dyna"
+              },
+              {
+                "file": "08_dyna",
+                "title": "Dyna"
+              },
+              {
+                "file": "09_lafleuraufusil",
+                "title": "La Fleur au Fusil"
+              },
+              {
+                "file": "10_lesbas",
+                "title": "Les bas"
+              },
+              {
+                "file": "11_anneetaudrey",
+                "title": "Anne et Audrey"
+              },
+              {
+                "file": "12_morgane",
+                "title": "Morgane"
+              },
+              {
+                "file": "13_morganeetaudrey",
+                "title": "Morgane et Audrey"
+              },
+              {
+                "file": "14_dynaalafenetre2",
+                "title": "Dyna à la fenêtre 2"
+              },
+              {
+                "file": "15_dynaalafenetre",
+                "title": "Dyna à la fenêtre"
+              },
+              {
+                "file": "16_paris",
+                "title": "Paris"
+              },
+              {
+                "file": "17_annealafenetre",
+                "title": "Anne à la fenêtre"
+              },
+              {
+                "file": "18_annededos",
+                "title": "Anne de dos"
+              }
+            ]
+          },
+          {
+            "id" : "retour-en-terres-nulle-part",
+            "name" : "Retour en Terres Nulle-Part",
+            "cover" : {
+
+            },
+            "photos": [
+              {
+                "file": "01_lesenfantsperdus",
+                "title": "Les Enfants Perdus"
+              },
+              {
+                "file": "02_lesenfantsperdu3",
+                "title": "Les Enfants Perdus 3"
+              },
+              {
+                "file": "03_mariesurlestoits",
+                "title": "Marie sur les Toits"
+              },
+              {
+                "file": "04_lastcabaret",
+                "title": "Last Cabaret"
+              },
+              {
+                "file": "05_lavictoire",
+                "title": "La Victoire"
+              },
+              {
+                "file": "06_moinscinq",
+                "title": "Moins Cinq"
+              },
+              {
+                "file": "07_Wihl",
+                "title": "Wihl"
+              },
+              {
+                "file": "08_joprivatestmort",
+                "title": "Jo Privat est mort"
+              },
+              {
+                "file": "09_fanfan",
+                "title": "Fanfan"
+              },
+              {
+                "file": "10_lautomne",
+                "title": "L'automne"
+              },
+              {
+                "file": "11_lesourire",
+                "title": "Le Sourire"
+              },
+              {
+                "file": "12_lhiver",
+                "title": "L'hiver"
+              },
+              {
+                "file": "13_letombeau",
+                "title": "Le Tombeau"
+              }
+            ]
+          },
+          {
+            "id" : "salbatar-circus",
+            "name" : "Salbatar Circus",
+            "cover" : {
+
+            },
+            "photos": [
+              {
+                "file": "01_celine",
+                "title": "Céline"
+              },
+              {
+                "file": "02_opening",
+                "title": "Opening"
+              },
+              {
+                "file": "03_laboitemagique",
+                "title": "La Boîte Magique"
+              },
+              {
+                "file": "04_lebain",
+                "title": "Le Bain"
+              },
+              {
+                "file": "05_lepetitbaigneur",
+                "title": "Le Petit Baigneur"
+              },
+              {
+                "file": "06_lesailesdudesir",
+                "title": "Les Ailes du Désir"
+              },
+              {
+                "file": "07_lesloges2",
+                "title": "Les loges 2"
+              },
+              {
+                "file": "08_lediableetlanuit",
+                "title": "Le Diable et la Nuit"
+              },
+              {
+                "file": "09_lenainjaune",
+                "title": "Le Nain Jaune"
+              },
+              {
+                "file": "10_lestontonfarceur1",
+                "title": "Les Tontons Farceurs"
+              },
+              {
+                "file": "11_lestontonsfarceurs2",
+                "title": "Les Tontons Farceurs 2"
+              },
+              {
+                "file": "12_sandrineetsophie",
+                "title": "Sandrine et Sophie"
+              },
+              {
+                "file": "13_sophie",
+                "title": "Sophie"
+              },
+              {
+                "file": "14_tavertu",
+                "title": "Ta Vertu"
+              },
+              {
+                "file": "15_nowhere",
+                "title": "Nowhere"
+              },
+              {
+                "file": "16_roadtonowhere",
+                "title": "Road to Nowhere"
+              },
+              {
+                "file": "17_beautyisdangerous",
+                "title": "Beauty is Dangerous"
+              },
+              {
+                "file": "18_beautyissecret",
+                "title": "Beauty is Secret"
+              },
+              {
+                "file": "19_cestlhiverdemain",
+                "title": "C'est l'hiver demain"
+              },
+              {
+                "file": "20_frenchlover1",
+                "title": "French Lover"
+              },
+              {
+                "file": "21_frenchlover2",
+                "title": "French Lover"
+              },
+              {
+                "file": "22_frenchlover3",
+                "title": "French Lover"
+              },
+              {
+                "file": "23_gomina1",
+                "title": "Gomina 1"
+              },
+              {
+                "file": "24_gomina2",
+                "title": "Gomina 2"
+              },
+              {
+                "file": "25_industrie",
+                "title": "Industrie"
+              },
+              {
+                "file": "26_lachatte",
+                "title": "La Chatte"
+              },
+              {
+                "file": "27_lepetitsoldat",
+                "title": "Le Petit Soldat"
+              },
+              {
+                "file": "28_lostguy",
+                "title": "Lost Guy"
+              },
+              {
+                "file": "29_flyergin",
+                "title": "Flyer Gin"
+              },
+              {
+                "file": "30_tom",
+                "title": "Tom"
+              },
+              {
+                "file": "31_estceainsiqueleshommesvivent",
+                "title": "Est-ce ainsi que les hommes vivent"
+              },
+              {
+                "file": "32_estceainsi2",
+                "title": "Est-ce ainsi que les hommes vivent 2"
+              },
+              {
+                "file": "33_estceainsi3",
+                "title": "Est-ce ainsi que les hommes vivent 3"
+              },
+              {
+                "file": "34_lesoiseaux",
+                "title": "Les oiseaux"
+              }
+            ]
+          }
+        ]    
+      },
+      {
+        "id": "clients",
+        "name": "Clients",
+        "type": "photos",
+        "collection": [
+          {
+            "id": "playful-promises",
+            "name": "Playful Promises",
+            "cover": {
+
+            },
+            "photos": [
+              {
+                "file": "playful1",
+                "title": "Playful 1"
+              },
+              {
+                "file": "playful2",
+                "title": "Playful 2"
+              },
+              {
+                "file": "playful3",
+                "title": "Playful 3"
+              },
+              {
+                "file": "playful4",
+                "title": "Playful 4"
+              },
+              {
+                "file": "playful5",
+                "title": "Playful 5"
+              },
+              {
+                "file": "playful6",
+                "title": "Playful 6"
+              },
+              {
+                "file": "playful7",
+                "title": "Playful 7"
+              },
+              {
+                "file": "playful8",
+                "title": "Playful 8"
+              },
+              {
+                "file": "playful9",
+                "title": "Playful 9"
+              },
+              {
+                "file": "playful10",
+                "title": "Playful 10"
+              },
+              {
+                "file": "playful11",
+                "title": "Playful 11"
+              },
+              {
+                "file": "playful12",
+                "title": "Playful 12"
+              },
+              {
+                "file": "playful13",
+                "title": "Playful 13"
+              },
+              {
+                "file": "playful14",
+                "title": "Playful 14"
+              },
+              {
+                "file": "playful15",
+                "title": "Playful 15"
+              },
+              {
+                "file": "playful16",
+                "title": "Playful 16"
+              }
+            ]
+          },
+          {
+            "id": "lilith",
+            "name": "Lilith",
+            "cover": {
+
+            },
+            "photos": [
+              {
+                "file": "lilith-00",
+                "title": ""
+              },
+              {
+                "file": "lilith-01",
+                "title": ""
+              },
+              {
+                "file": "lilith-02",
+                "title": ""
+              },
+              {
+                "file": "lilith-03",
+                "title": ""
+              },
+              {
+                "file": "lilith-04",
+                "title": ""
+              },
+              {
+                "file": "lilith-05",
+                "title": ""
+              },
+              {
+                "file": "lilith-06",
+                "title": ""
+              },
+              {
+                "file": "lilith-07",
+                "title": ""
+              },
+              {
+                "file": "lilith-08",
+                "title": ""
+              },
+              {
+                "file": "lilith-09",
+                "title": ""
+              },
+              {
+                "file": "lilith-10",
+                "title": ""
+              },
+              {
+                "file": "lilith-11",
+                "title": ""
+              },
+              {
+                "file": "lilith-12",
+                "title": ""
+              },
+              {
+                "file": "lilith-13",
+                "title": ""
+              },
+              {
+                "file": "lilith-14",
+                "title": ""
+              },
+              {
+                "file": "lilith-15",
+                "title": ""
+              }
+            ]
+          },
+          {
+            "id": "pamela-de-beaumane",
+            "name": "Pamela De Beaumane",
+            "cover": {
+
+            },
+            "photos": [
+              {
+                "file": "pamela-de-beaumane-01",
+                "title": ""
+              },
+              {
+                "file": "pamela-de-beaumane-02",
+                "title": ""
+              },
+              {
+                "file": "pamela-de-beaumane-03",
+                "title": ""
+              },
+              {
+                "file": "pamela-de-beaumane-04",
+                "title": ""
+              },
+              {
+                "file": "pamela-de-beaumane-05",
+                "title": ""
+              },
+              {
+                "file": "pamela-de-beaumane-06",
+                "title": ""
+              },
+              {
+                "file": "pamela-de-beaumane-07",
+                "title": ""
+              },
+              {
+                "file": "pamela-de-beaumane-08",
+                "title": ""
+              },
+              {
+                "file": "pamela-de-beaumane-09",
+                "title": ""
+              },
+              {
+                "file": "pamela-de-beaumane-10",
+                "title": ""
+              }
+            ]
+          },
+          {
+            "id": "artwork",
+            "name": "Artwork",
+            "cover": {
+                "file": "les-yeux-de-la-tete-0",
+                "title": "Les Yeux de la Tête"
+            },
+            "photos": [
+              {
+                "file": "all-that-jazz-1",
+                "title": "All That Jazz"
+              },
+              {
+                "file": "all-that-jazz-2",
+                "title": "All That Jazz"
+              },
+              {
+                "file": "garcon-de-plage-1",
+                "title": "Garçon de Plage"
+              },
+              {
+                "file": "garcon-de-plage-2",
+                "title": "Garçon de Plage"
+              },
+              {
+                "file": "les-yeux-de-la-tete-0",
+                "title": "Les Yeux de la Tête"
+              },
+              {
+                "file": "les-yeux-de-la-tete-1",
+                "title": "Les Yeux de la Tête"
+              },
+              {
+                "file": "les-yeux-de-la-tete-2",
+                "title": "Les Yeux de la Tête"
+              },
+              {
+                "file": "les-yeux-de-la-tete-3",
+                "title": "Les Yeux de la Tête"
+              },
+              {
+                "file": "les-yeux-de-la-tete-4",
+                "title": "Les Yeux de la Tête"
+              },
+              {
+                "file": "les-yeux-de-la-tete-5",
+                "title": "Les Yeux de la Tête"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "videos",
+        "name": "Videos",
+        "type": "videos",
+        "collection": [
+          {
+            "id": "cgccph2K8pk",
+            "url": "//www.youtube.com/embed/cgccph2K8pk?rel=0&amp;amp;showinfo=1"
+          },
+          {
+            "id": "UD0L3gpdCV0",
+            "url": "//www.youtube.com/embed/UD0L3gpdCV0?rel=0&amp;amp;showinfo=1"
+          },
+          {
+            "id": "KNPO8tKfbJE",
+            "url": "//www.youtube.com/embed/KNPO8tKfbJE?rel=0&amp;amp;showinfo=1"
+          },
+          {
+            "id": "33PqiBrPpEA",
+            "url": "//www.youtube.com/embed/33PqiBrPpEA?rel=0&amp;amp;showinfo=1"
+          },
+          {
+            "id": "4wK3wmQxgQs",
+            "url": "//www.youtube.com/embed/4wK3wmQxgQs?rel=0&amp;amp;showinfo=1"
+          },
+          {
+            "id": "XBKih373clY",
+            "url": "//www.youtube.com/embed/XBKih373clY?rel=0&amp;amp;showinfo=1"
+          },
+          {
+            "id": "-XujvkEHlEk",
+            "url": "//www.youtube.com/embed/-XujvkEHlEk?rel=0&amp;amp;showinfo=1"
+          },
+          {
+            "id": "W2FFGcqEvFs",
+            "url": "//www.youtube.com/embed/W2FFGcqEvFs?rel=0&amp;amp;showinfo=1"
+          },
+          {
+            "url": "//player.vimeo.com/video/109320228?loop=1&amp;title=1&amp;amp;byline=0&amp;amp;portrait=0"
+          },
+          {
+            "id": "H7oLl13a_Bc",
+            "url": "//www.youtube.com/embed/H7oLl13a_Bc?rel=0&amp;amp;showinfo=1"
+          },
+          {
+            "id": "1NASVOmJtr8",
+            "url": "//www.youtube.com/embed/1NASVOmJtr8?rel=0&amp;amp;showinfo=1"
+          }
+        ]
+      },
+      {
+        "id": "home",
+        "name": "LeTurk",
+        "type": "logo",
+        "source": "logo-leturk-white.png",
+        "subtitle": "Photographer<br>Director<br>Set Designer",
+        "animation": [
+          {
+            "file": "intro-1",
+            "animationClass": "animate-1"
+          },
+          {
+            "file": "intro-2",
+            "animationClass": "animate-2"
+          },
+          {
+            "file": "intro-3",
+            "animationClass": "animate-3"
+          },
+          {
+            "file": "intro-4",
+            "animationClass": "animate-4"
+          }
+        ]
+      },
+      {
+        "id": "shop",
+        "name": "Shop",
+        "type": "link",
+        "url": "https://www.leturkshop.com/"
+      },
+      {
+        "id": "agenda",
+        "name": "agenda",
+        "type": "agenda",
+        "collection": [
+          {
+            "name": "Exposition Artplexe",
+            "location": "à Marseille",
+            "date": "Octobre 2021"
+          },
+          {
+            "name": "Masterclass",
+            "location": "à l'Atelier",
+            "date": "18 et 19 Septembre 2021",
+            "link": {
+              "text": "Infos et Réservations",
+              "url": "https://www.leturkshop.com/masterclass"
+            }
+          },
+          {
+            "name": "Masterclass",
+            "location": "à l'Atelier",
+            "date": "29 et 30 Septembre 2021",
+            "link": {
+              "text": "Infos et Réservations",
+              "url": "https://www.leturkshop.com/masterclass"
+            }
+          },
+          {
+            "name": "Youtube Live",
+            "location": "sur Adobe France",
+            "date": "18 Mars 2020"
+          },
+          {
+            "name": "Masterclass",
+            "location": "à Toulouse",
+            "date": "14 et 15 Mars 2020"
+          },
+          {
+            "name": "Masterclass",
+            "location": "à Cheverny",
+            "date": "15 et 16 Février"
+          },
+          {
+            "name": "Masterclass de 5 jours",
+            "location": "à l'Atelier Charles à Metz",
+            "date": "16 au 20 Décembre 2019",
+            "link": {
+              "text": "Infos et Réservations",
+              "url": "https://www.atelier-charles.fr/masterclass-le-turk/?fbclid=IwAR1w1RFdu-vdg56bDwfqxTfZSW9FUDJdYcV9IHe0Xb-E-UWcFjo08Dpx3BU"
+            }
+          },
+          {
+            "name": "Shooting / workshop public en partenariat avec Canon",
+            "location": "chez Numériphot à Toulouse",
+            "date": "27 et 28 Novembre 2019"
+          },
+          {
+            "name": "Exposition",
+            "location": "au Festival Constellations à Metz",
+            "date": "Juin/Septembre 2019"
+          },
+          {
+            "name": "Exposition",
+            "location": "à la Gare de l'Est à Paris",
+            "date": "Juillet/Septembre 2019"
+          },
+          {
+            "name": "Exposition rétrospective",
+            "location": "à la Basilique Saint Vincent de Metz",
+            "date": "Mai 2019"
+          },
+          {
+            "name": "Masterclass construction de décors",
+            "location": "à Metz",
+            "date": "6 Avril 2019"
+          },
+          {
+            "name": "Masterclass pendant le Venezia PHOTO",
+            "location": "à Venise",
+            "date": "25/28 Avril 2019"
+          },
+          {
+            "name": "Résidence dans le cadre du Festival \"Photographie mon Amour\"",
+            "location": "à Metz",
+            "date": "Février / Avril 2019"
+          },
+          {
+            "name": "Masterclass construction de décors",
+            "location": "à Paris",
+            "date": "27 Octobre 2018"
+          },
+          {
+            "name": "Masterclass",
+            "location": "à l'Atelier Fenky, en Alsace",
+            "date": "16 Décembre 2017"
+          },
+          {
+            "name": "Salon de la Photo - Séance photo publique - Interviews - Dédicaces",
+            "location": "Au stand Normal Magazine",
+            "date": "11 Novembre 2017"
+          },
+          {
+            "name": "LeTurk - Masterclass",
+            "location": "au recording studio Marseille",
+            "date": "30 Octobre/1er Novembre"
+          },
+          {
+            "name": "Exposition / Vente",
+            "location": "à la VAGUE Saint-Paul",
+            "date": "Juillet 2017 / Septembre 2017"
+          },
+          {
+            "name": "Exposition pour le French May à La Galerie - Paris 1839",
+            "location": "Hong-Kong",
+            "date": "Mai 2017"
+          },
+          {
+            "name": "Masterclass",
+            "location": "à Paris",
+            "date": "29 Avril 2017"
+          }
+        ]
+      },
+      {
+        "id": "contact",
+        "name": "@",
+        "type": "link",
+        "url": "mailto:contact@leturk.com"
+      }
+    ]
+  }
+}
