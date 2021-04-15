@@ -5,6 +5,7 @@
         "id": "series",
         "name": "Séries",
         "type": "photos",
+        "onHome": true,
         "collection" : [
           {
             "id" : "les-machines-absurdes",
@@ -759,6 +760,7 @@
         "id": "clients",
         "name": "Clients",
         "type": "photos",
+        "onHome": true,
         "collection": [
           {
             "id": "playful-promises",
@@ -1060,7 +1062,8 @@
       {
         "id": "home",
         "name": "LeTurk",
-        "type": "logo",
+        "type": "animation",
+        "onHome": true,
         "source": "logo-leturk-white.png",
         "subtitle": "Photographer<br>Director<br>Set Designer",
         "animation": [
@@ -1090,7 +1093,7 @@
       },
       {
         "id": "agenda",
-        "name": "agenda",
+        "name": "Agenda",
         "type": "agenda",
         "collection": [
           {
