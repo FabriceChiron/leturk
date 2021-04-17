@@ -1,21 +1,3 @@
-generateLogoLink = (container, category, target) => {
-  console.log(category.id);
-  const logoLink = createElem('a', container, {
-    href: `#${(target !== undefined) ? `${target}` : ''}`,
-    class: 'logo-link'
-  });
-
-  const logoImg = createElem('img', logoLink, {
-    src: `images/logo/${category.source}`
-  });
-
-  if(target) {
-    const logoSubTitle = createElem('h2', logoLink);
-
-    logoSubTitle.innerHTML = category.subtitle;
-  }
-}
-
 generateMenu = (content) => {
 
   const header = document.querySelector('header');
@@ -38,7 +20,7 @@ generateMenu = (content) => {
 
   content.categories.map(category => {
     let catElem = createElem('li', nav, {
-      class: `category ${(category.id === 'home') ? category.id : category.home}`
+      class: `category ${(category.id === 'home') ? category.id : category.type}`
     });
 
 
@@ -53,15 +35,27 @@ generateMenu = (content) => {
         generateLogoLink(navHolder, category);
       } else {
         
-        generateMenuLink(category, catElem, category.id);
+        let catLinkContainer = createElem('span', catElem);
+        generateMenuLink(category, catLinkContainer, category.id);
         
         if(category.type === "photos" && category.collection.length > 0) {
+          if(viewPort === 'mobile') {
+            let collectionInput = createElem('input', catElem, {
+              type: 'checkbox',
+              id: `toggle-${category.id}`
+            }, 'prepend');
 
+            let collectionBtn = createElem('label', catLinkContainer, {
+              for: `toggle-${category.id}`
+            });
+          }
           let collectionContainer = createElem('div', catElem);
           let collectionHolder = createElem('ul', collectionContainer);
 
           category.collection.map(collectionItem => {
-            let collectionElem = createElem('li', collectionHolder);
+            let collectionElem = createElem('li', collectionHolder, {
+              id: `${collectionItem.id}`
+            });
             generateMenuLink(collectionItem, collectionElem, `${category.id}/${collectionItem.id}`);
           });
         }

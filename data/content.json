@@ -32,7 +32,8 @@
             "id" : "la-garenne-du-prince",
             "name" : "La Garenne du Prince",
             "cover" : {
-
+              "file": "haloween-1",
+              "title": "Haloween 1"
             },
             "photos": [
               {
@@ -172,8 +173,10 @@
           {
             "id" : "ode-a-metz",
             "name" : "Ode A Metz",
+            "highlight": true,
             "cover" : {
-
+              "file": "legraoully",
+              "title": "Le Graoully"
             },
             "photos": [
               {
@@ -342,7 +345,7 @@
             ]
           },
           {
-            "id" : "romance-et-series-b",
+            "id" : "romances-et-series-b",
             "name" : "Romances et Séries B",
             "cover" : {
 
@@ -1013,56 +1016,84 @@
         "id": "videos",
         "name": "Videos",
         "type": "videos",
+        "onHome": true,
         "collection": [
           {
             "id": "cgccph2K8pk",
-            "url": "//www.youtube.com/embed/cgccph2K8pk?rel=0&amp;amp;showinfo=1"
+            "type": "youtube",
+            "name": "Le Turk - Les Coulisses d'un shooting",
+            "url": "//www.youtube.com/embed/cgccph2K8pk?rel=0&showinfo=1"
           },
           {
             "id": "UD0L3gpdCV0",
-            "url": "//www.youtube.com/embed/UD0L3gpdCV0?rel=0&amp;amp;showinfo=1"
+            "type": "youtube",
+            "name": "Aliashka - TOTEM",
+            "highlight": true,
+            "url": "//www.youtube.com/embed/UD0L3gpdCV0?rel=0&showinfo=1"
           },
           {
             "id": "KNPO8tKfbJE",
-            "url": "//www.youtube.com/embed/KNPO8tKfbJE?rel=0&amp;amp;showinfo=1"
+            "type": "youtube",
+            "name": "C'est quoi le beau ? par Le Turk",
+            "url": "//www.youtube.com/embed/KNPO8tKfbJE?rel=0&showinfo=1"
           },
           {
             "id": "33PqiBrPpEA",
-            "url": "//www.youtube.com/embed/33PqiBrPpEA?rel=0&amp;amp;showinfo=1"
+            "res": "hq",
+            "type": "youtube",
+            "name": "Résidence Le Turk chez Bout d'essais / 1er trimestre 2019",
+            "url": "//www.youtube.com/embed/33PqiBrPpEA?rel=0&showinfo=1"
           },
           {
             "id": "4wK3wmQxgQs",
-            "url": "//www.youtube.com/embed/4wK3wmQxgQs?rel=0&amp;amp;showinfo=1"
+            "type": "youtube",
+            "name": "Le Turk au Recording Studio Marseille. \"Entrée des Artistes\", Making of",
+            "url": "//www.youtube.com/embed/4wK3wmQxgQs?rel=0&showinfo=1"
           },
           {
             "id": "XBKih373clY",
-            "url": "//www.youtube.com/embed/XBKih373clY?rel=0&amp;amp;showinfo=1"
+            "type": "youtube",
+            "name": "Le Turk pour Lilith - Automne Hiver 2017 - Making-of",
+            "url": "//www.youtube.com/embed/XBKih373clY?rel=0&showinfo=1"
           },
           {
             "id": "-XujvkEHlEk",
-            "url": "//www.youtube.com/embed/-XujvkEHlEk?rel=0&amp;amp;showinfo=1"
+            "type": "youtube",
+            "name": "JERONYMUS - Solaire",
+            "url": "//www.youtube.com/embed/-XujvkEHlEk?rel=0&showinfo=1"
           },
           {
             "id": "W2FFGcqEvFs",
-            "url": "//www.youtube.com/embed/W2FFGcqEvFs?rel=0&amp;amp;showinfo=1"
+            "type": "youtube",
+            "name": "Le Turk, Le livre.",
+            "url": "//www.youtube.com/embed/W2FFGcqEvFs?rel=0&showinfo=1"
           },
           {
-            "url": "//player.vimeo.com/video/109320228?loop=1&amp;title=1&amp;amp;byline=0&amp;amp;portrait=0"
+            "id": "109320228",
+            "type": "vimeo",
+            "name": "Le Turk, Le Tombeau des Sirènes, les coulisses",
+            "url": "//player.vimeo.com/video/109320228?loop=1&title=1&byline=0&portrait=0"
           },
           {
             "id": "H7oLl13a_Bc",
-            "url": "//www.youtube.com/embed/H7oLl13a_Bc?rel=0&amp;amp;showinfo=1"
+            "res": "hq",
+            "type": "youtube",
+            "name": "Maltosh - Le Meilleur des Mondes",
+            "url": "//www.youtube.com/embed/H7oLl13a_Bc?rel=0&showinfo=1"
           },
           {
             "id": "1NASVOmJtr8",
-            "url": "//www.youtube.com/embed/1NASVOmJtr8?rel=0&amp;amp;showinfo=1"
+            "res": "hq",
+            "type": "youtube",
+            "name": "Maison Blackitten collection \" Le Chat Noir \" (2013)",
+            "url": "//www.youtube.com/embed/1NASVOmJtr8?rel=0&showinfo=1"
           }
         ]
       },
       {
         "id": "home",
         "name": "LeTurk",
-        "type": "animation",
+        "type": "home",
         "onHome": true,
         "source": "logo-leturk-white.png",
         "subtitle": "Photographer<br>Director<br>Set Designer",

@@ -1,25 +1,72 @@
-let viewPort;
-let currentHash;
+let viewPort, currentHash, isHomepage, wasHomepage, pageScroller;
 
-const hashHandler = () => {
-  currentHash = window.location.hash.split('?')[0].substring(1);
-  generateStructure(viewPort, currentHash);
+const md = new MobileDetect(window.navigator.userAgent);
+
+const arrayHomePage = ['', 'series', 'clients', 'videos'];
+
+const hashHandler = (viewPortChange) => {
+  let newHash = window.location.hash.split('?')[0].substring(1);
+
+  scrollOnStart(newHash === '', viewPort);
+
+  wasHomepage = (!currentHash || (currentHash && arrayHomePage.includes(currentHash))) ? true : false;
+
+  if(arrayHomePage.includes(newHash)) {
+    isHomepage = true;
+    handleScroll(pageScroller);
+    document.body.classList.add('on-homepage');
+  } 
+  else {
+    isHomepage = false;
+    document.body.classList.remove('on-homepage');
+  }
+
+  if(isHomepage ===  true && wasHomepage === true) {
+    pageChange = false;
+  }
+
+
+  else {
+    pageChange = true;
+  }
+  
+  if(viewPortChange || pageChange) {
+    // console.table(`currentHash: ${currentHash}`, `viewPortChange: ${viewPortChange}`, `pageChange: ${pageChange}`)
+    generateStructure(viewPort, newHash, isHomepage);
+  }
+
+  currentHash = newHash;
+  
+
+}
+
+const getPageScroller= (viewPort) => { 
+  pageScroller = (viewPort === 'mobile') ? document.querySelector('#main-container') : window;
 }
 
 const initViewPort = () => {
-  
-  let newViewPort = (window.innerWidth < 740) ? 'mobile' : 'desktop';
+
+  let newViewPort;
+
+  if(md.mobile()) {
+    newViewPort = 'mobile';
+  } else {
+    newViewPort = (window.innerWidth < 740) ? 'mobile' : 'desktop';
+  }
+
 
   if((newViewPort != viewPort) || !viewPort) {
-    console.log(`viewPort change: ${newViewPort}`);
-
     viewPort = newViewPort;
+    
+    getPageScroller(viewPort);
 
-    setAttributes(document.body, {
-      class: viewPort
-    });
+    [...document.querySelectorAll('body, header, #main-container')].map(el => {
+      setAttributes(el, {
+        class: viewPort
+      });
+    })
 
-    hashHandler();
+    hashHandler(true);
   }
 }
 
@@ -47,19 +94,18 @@ generateMenuLink = (group, item, path) => {
 }
 
 
-const generateStructure = (viewPort, currentHash) => {
+const generateStructure = (viewPort, hash, isHomepage) => {
 
-  console.log(`generating ${(currentHash === '') ? 'homepage' : `${currentHash} page`} on ${viewPort}`);
-  
   fetch('data/content.json')
   .then(res => res.json())
   .then(data => {
-    generateMenu(data.content);
+    generateMenu(data.content, hash, isHomepage);
 
-    generateContent(data.content);
+    generateContent(data.content, hash, isHomepage);
   });
 
 }
+
 
 
 
