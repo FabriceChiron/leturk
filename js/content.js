@@ -17,7 +17,36 @@ const generatePage = (collection, mainContainer, type) => {
           class: 'infos-image'
         });
 
-        const photoTitle = createElem('h2', infosImage).innerText = `${photo.title}`;
+        const toolbarImage = createElem('div', photoTile, {
+          class: 'toolbar'
+        }, 'prepend');
+
+        const btnZoomImage = createElem('button', toolbarImage);
+        btnZoomImage.innerText = 'Ñ';
+
+        btnZoomImage.onclick = function() {
+          toPopin(photoTile, collection, mainContainer, type);
+        }
+        
+        const photoCopyRight = createElem('div', infosImage, {
+          class: 'copyright'
+        }).innerHTML = `&copy LeTurk`;
+
+        if(photo.title) {
+          const photoTitle = createElem('h2', infosImage).innerText = `${photo.title}`;
+        }
+
+        if(viewPort === 'desktop') {
+          photoTile.ondblclick = function() {
+            toPopin(photoTile, collection, mainContainer, type);
+          }
+        } 
+
+        if(viewPort === 'mobile') {
+          photoTile.onclick = function() {
+            toPopin(photoTile, collection, mainContainer, type);
+          }
+        } 
       });
     break;
   }
@@ -46,7 +75,7 @@ const generateSection = (category, mainContainer, content) => {
       generateLogoLink(categorySection, category, content.categories[0].id);
 
       // jQuery Hack for non-chromium browsers;
-      dirtyHack();
+      // dirtyHack();
           
     break;
     
@@ -77,7 +106,6 @@ const generateSection = (category, mainContainer, content) => {
         else {
           coverImage = collection.photos[0];
         }
-        
         
         const tileImage = createElem('img', tile);
 
@@ -120,9 +148,9 @@ const generateSection = (category, mainContainer, content) => {
         const tileTitle = createElem('h3', tile);
         tileTitle.innerText = `${collection.name}`;
 
-        const tileBtn = createElem('button', tile);
-        tileBtn.dataset.href = `${collection.url}`;
+        const tileBtn = createElem('button', tile)
         tileBtn.innerText = 'Ù';
+        tileBtn.dataset.href = `${collection.url}`;
 
         tileBtn.onclick = function() {
           toPopin(tile, collection, mainContainer, category.type);
@@ -143,7 +171,8 @@ const generateContent = (content, hash, isHomepage) => {
   mainContainer.innerHTML = '';
   console.log(mainContainer.innerHTML.length > 0);
 
-    content.categories.map(category => {
+    content.categories.map((category, index) => {
+
       if(isHomepage) {
         if(category.onHome === true) {
           generateSection(category, mainContainer, content);
@@ -162,7 +191,12 @@ const generateContent = (content, hash, isHomepage) => {
         }
 
       }
-    })
 
+      if(index === content.categories.length - 1) {
+        setTimeout(function() {
+          scrollToElem(`#${hash}`);
+        }, transitionSpeed * 2);
+      }
+    });
 
 }

@@ -76,7 +76,7 @@ const initViewPort = () => {
 }
 
 
-generateBurgerMenu = (container) => {
+const generateBurgerMenu = (container) => {
   const toggleMenuInput = createElem('input', container, {
     type:"checkbox",
     id: "toggle-menu"
@@ -91,15 +91,10 @@ generateBurgerMenu = (container) => {
   toggleMenuButton.innerHTML = '<span></span><span></span><span></span>';
 }
 
-generateMenuLink = (group, item, path) => {
-  let menuLink = createElem('a', item, {
-    href: `#${path}`
-  });
-  menuLink.innerText = `${group.name}`;
-}
-
 
 const generateStructure = (viewPort, hash, isHomepage) => {
+
+  console.log(`Generating page`);
 
   fetch('data/content.json')
   .then(res => res.json())

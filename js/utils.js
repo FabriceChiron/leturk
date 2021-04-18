@@ -5,7 +5,7 @@ if(window.location.pathname.indexOf('/wip') === -1 || window.location.hostname =
   imagesFolder = 'photos';
 }
 else {
-  imagesRoot = './images';
+  imagesRoot = '../images';
   imagesFolder = 'tinified';
 }  
 
@@ -72,10 +72,33 @@ const createElem = (el, ctnr, attrs, where) => {
   return element;
 }
 
+const generateMenuLink = (group, item, path) => {
+  console.log(group.type);
+  let menuLink = createElem('a', item, {
+    href: `${(group.type === 'link') ? `${group.url}` : `#${path}`}`
+  });
+  
+  if(group.type === 'link') {
+    setAttributes(menuLink, {
+      target: '_blank'
+    });
+  }
+
+  if(arrayHomePage.includes(path)) {
+    // menuLink.addEventListener("click", dirtyHack(menuLink));
+    setAttributes(menuLink, {
+      onclick: `dirtyHack(this, event)`
+    });
+  }
+
+  menuLink.innerText = `${group.name}`;
+}
+
 const generateLogoLink = (container, category, target) => {
   const logoLink = createElem('a', container, {
     href: `#${(target !== undefined) ? `${target}` : ''}`,
-    class: 'logo-link'
+    class: 'logo-link',
+    onclick: `dirtyHack(this, event)`
   });
 
   const logoImg = createElem('img', logoLink, {
@@ -86,45 +109,46 @@ const generateLogoLink = (container, category, target) => {
     const logoSubTitle = createElem('h2', logoLink);
     logoSubTitle.innerHTML = category.subtitle;
   }
-
-  // if(target) {
-  //   logoLink.onclick = function(event) {
-  //     event.preventDefault();
-      
-  //     document.body.classList.add('to-content');
-
-  //     setTimeout(function(){
-  //       window.location.hash = target;
-  //     }, 250);
-  //   }
-  // }
 }
 
 const createImage = (imgElem, imgSrc, toBackground) => {
   // console.log(imgElem, imgSrc);
   const newImg = new Image();
 
+  const loaded = () => {
+    getAspectRatio(imgElem);
+  }
+
   newImg.onload = function() {
     imgElem.src = this.src;
-    getAspectRatio(imgElem);
 
     if(toBackground) {
       setAttributes(imgElem.parentElement, {
         style: `background-image: url(${imgSrc})`
       });
 
+      // imgElem.parentElement.style += `background-image: url(${imgSrc})`;
+
       imgElem.parentElement.classList.add('bg-img');
     }
   }
   newImg.src = imgSrc;
+
+  if (imgElem.complete) {
+    loaded()
+  } else {
+    imgElem.addEventListener('load', loaded)
+    imgElem.addEventListener('error', function() {
+      alert('error')
+    })
+  }
+
 }
 
 const getAspectRatio = (img) => {
   let imgWidth = img.naturalWidth;
   let imgHeight = img.naturalHeight;
   let ratio;
-
-  // console.table(imgWidth, imgHeight);
 
   if(imgWidth > imgHeight) {
     ratio = 'landscape';
@@ -137,6 +161,10 @@ const getAspectRatio = (img) => {
   }
 
   img.parentElement.classList.add(ratio);
+  img.parentElement.dataset.aspectRatio = `${imgWidth} / ${imgHeight}`;
+  img.parentElement.dataset.naturalWidth = `${imgWidth}`;
+  img.parentElement.dataset.naturalHeight = `${imgHeight}`;
+  img.style = ` --aspect-ratio: ${imgWidth} / ${imgHeight}`;
 
 }
 
@@ -194,15 +222,29 @@ const getMediaPopin = (originElem, elemData, container, type) => {
     class: 'toolbar'
   });
 
+  emptyContainer(popinToolbar);
+
+  console.log(originElem.previousSibling);
+  console.log(originElem.nextSibling);
+
   const popinContainer = document.querySelector('#media-popin-container') || createElem('div', mediaPopin, {
     id: "media-popin-container"
   });
 
-  const btnClosePopin = createElem('button', popinToolbar, {
-    id: 'close-popin'
-  });
+  // if(popinToolbar.innerHTML.length === 0) {
+    if(type === 'photos') {
+      const btnZoomImage = createElem('button', popinToolbar, {
+        id: 'zoom-image'
+      })
+      btnZoomImage.innerText = 'Ñ';
+    }
 
-  btnClosePopin.innerText = 'Î';
+    const btnClosePopin = createElem('button', popinToolbar, {
+      id: 'close-popin'
+    })
+    btnClosePopin.innerText = 'Î';
+  // }
+
 
   btnClosePopin.onclick = function() {
     closePopin(mediaPopin, popinContainer);
@@ -227,13 +269,12 @@ const insertContentInPopin = (elemData, type, container, originElem) => {
     break;
 
     case 'photos':
-      setTimeout(function() {
-        popinContent = createElem('div', container);
-        const popinImage = createElem('img', popinContent);
+      popinContent = createElem('div', container, {
+        class: `${type}`
+      });
+      const popinImage = createElem('img', popinContent);
 
-        createImage(popinImage, originElem.querySelector('img').src.replace('default', 'full'), true);
-      }, transitionSpeed * 2);
-
+      createImage(popinImage, originElem.querySelector('img').src.replace('default', 'full'));
     break;
   }
 }
@@ -254,26 +295,37 @@ const toPopin = (originElem, elemData, container, type) => {
 
 }
 
-const dirtyHack = () => {
-  $(function() {
-    console.log($('#home .logo-link').length);
 
-    $('#home .logo-link').on('click', function(event) {
-      console.log('yo');
-      event.preventDefault();
+const scrollToElem = (hash) => {
+  if(arrayHomePage.includes(hash)) {
 
-      var hash = this.hash;
+    if(hash.charAt(0) !== '#') {
+      hash = `#${hash}`;
+    }
 
-      console.log(this.hash);
-
+    $(function() {
       var scroller = (viewPort === "mobile") ? '#main-container' : 'html, body';
-
       $(scroller).animate({
-        scrollTop: $(hash).offset().top
+        scrollTop: $((hash === '#') ? 'body' : hash).offset().top
       }, 250, function() {
         window.location.hash = hash;
       });
 
-    })
-  })
+    });
+    
+  }
+}
+
+
+const dirtyHack = (elem, event) => {
+  let hash = elem.hash;
+
+  if(arrayHomePage.includes(hash)) {
+    event.preventDefault();
+
+    scrollToElem(hash);
+  }
+  else {
+    return true;
+  }
 }

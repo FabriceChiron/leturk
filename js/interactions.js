@@ -4,9 +4,8 @@ const handleScroll = (pageScroller) => {
 
 
   pageScroller.onscroll = () => {
-    if(isHomepage) {
 
-    }
+    console.log(isHomepage);
 
     if(viewPort === 'mobile') {
 
@@ -21,27 +20,31 @@ const handleScroll = (pageScroller) => {
       }
     }
     else {
+      const homeLogo = document.querySelector('#home .logo-link');
+      
       if(isHomepage === true) {
-        const homeLogo = document.querySelector('#home .logo-link');
         const headerLogo = header.querySelector('.logo-link');
         
         // if(viewPort === 'desktop') {
           // console.log(homeLogo.getBoundingClientRect().top, header.getBoundingClientRect().top);
 
-          if(homeLogo.getBoundingClientRect().top >= header.getBoundingClientRect().top) {
-            homeLogo.classList.add('invisible');
-            homeLogo.classList.remove('visible');
+          if(homeLogo) {
+            if(homeLogo.getBoundingClientRect().top >= header.getBoundingClientRect().top) {
+              homeLogo.classList.add('invisible');
+              homeLogo.classList.remove('visible');
 
-            headerLogo.classList.add('visible');
-            headerLogo.classList.remove('invisible');
-          }
-          else {
-            homeLogo.classList.add('visible');
-            homeLogo.classList.remove('invisible');
+              headerLogo.classList.add('visible');
+              headerLogo.classList.remove('invisible');
+            }
+            else {
+              homeLogo.classList.add('visible');
+              homeLogo.classList.remove('invisible');
 
-            headerLogo.classList.add('invisible');
-            headerLogo.classList.remove('visible');
+              headerLogo.classList.add('invisible');
+              headerLogo.classList.remove('visible');
+            }
           }
+
 
           if(document.querySelector('html').scrollTop > window.innerHeight) {
             header.classList.add('sticky');
@@ -61,6 +64,8 @@ const handleScroll = (pageScroller) => {
 
       else {
         header.classList.add('sticky');
+        (homeLogo) && homeLogo.classList.remove('visible');
+        (homeLogo) && homeLogo.classList.remove('invisible');
       }
 
     }
