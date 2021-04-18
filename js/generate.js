@@ -11,10 +11,15 @@ const hashHandler = (viewPortChange) => {
 
   wasHomepage = (!currentHash || (currentHash && arrayHomePage.includes(currentHash))) ? true : false;
 
+  // if(newHash === '') {
+  //   document.body.classList.remove('to-content');
+  // }
+
   if(arrayHomePage.includes(newHash)) {
     isHomepage = true;
     handleScroll(pageScroller);
     document.body.classList.add('on-homepage');
+  
   } 
   else {
     isHomepage = false;

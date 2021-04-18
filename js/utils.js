@@ -86,12 +86,24 @@ const generateLogoLink = (container, category, target) => {
     const logoSubTitle = createElem('h2', logoLink);
     logoSubTitle.innerHTML = category.subtitle;
   }
+
+  // if(target) {
+  //   logoLink.onclick = function(event) {
+  //     event.preventDefault();
+      
+  //     document.body.classList.add('to-content');
+
+  //     setTimeout(function(){
+  //       window.location.hash = target;
+  //     }, 250);
+  //   }
+  // }
 }
 
 const createImage = (imgElem, imgSrc, toBackground) => {
   // console.log(imgElem, imgSrc);
   const newImg = new Image();
-  
+
   newImg.onload = function() {
     imgElem.src = this.src;
     getAspectRatio(imgElem);
@@ -240,4 +252,28 @@ const toPopin = (originElem, elemData, container, type) => {
     }, transitionSpeed);
   }
 
+}
+
+const dirtyHack = () => {
+  $(function() {
+    console.log($('#home .logo-link').length);
+
+    $('#home .logo-link').on('click', function(event) {
+      console.log('yo');
+      event.preventDefault();
+
+      var hash = this.hash;
+
+      console.log(this.hash);
+
+      var scroller = (viewPort === "mobile") ? '#main-container' : 'html, body';
+
+      $(scroller).animate({
+        scrollTop: $(hash).offset().top
+      }, 250, function() {
+        window.location.hash = hash;
+      });
+
+    })
+  })
 }

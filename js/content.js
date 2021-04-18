@@ -28,6 +28,10 @@ const generateSection = (category, mainContainer, content) => {
     id: `${category.id}`
   }, (category.type === 'home') ? 'prepend' : null);
 
+  // if(category === 'home' && viewPort === 'desktop') {
+  //     document.body.insertBefore(categorySection, mainContainer);
+  // }
+
   let categoryTitle, tilesHolder;
 
   switch(category.type) {
@@ -40,6 +44,9 @@ const generateSection = (category, mainContainer, content) => {
       })
 
       generateLogoLink(categorySection, category, content.categories[0].id);
+
+      // jQuery Hack for non-chromium browsers;
+      dirtyHack();
           
     break;
     

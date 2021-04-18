@@ -52,10 +52,10 @@ const handleScroll = (pageScroller) => {
         // }
 
         if(document.querySelector('html').scrollTop > 0) {
-          mainContainer.querySelector('#home .logo-link h2').classList.add('hide')
+          document.querySelector('#home .logo-link h2').classList.add('hide')
         }
         else {
-          mainContainer.querySelector('#home .logo-link h2').classList.remove('hide')
+          document.querySelector('#home .logo-link h2').classList.remove('hide')
         }
       }
 
@@ -67,7 +67,5 @@ const handleScroll = (pageScroller) => {
     
   }
 }
-
-
   // On scroll : desktop
 

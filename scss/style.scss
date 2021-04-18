@@ -35,16 +35,124 @@ body {
   font-weight: 200;
   text-transform: uppercase;
 
-  &.on-homepage {
-    header {
-      position: absolute;      
-      top: 100vh;
+  &.desktop{
+    position: relative;
 
-      &.sticky {
-        position: fixed;
-        top: 0;
+    &.on-homepage {
+      top: 0;
+      transition: top var(--transitionSpeed) ease-out;
+      header {
+        position: absolute;      
+        top: 100vh;
+  
+        &.sticky {
+          position: fixed;
+          top: 0;
+        }
       }
     }
+
+    &.to-content {
+      top: -100vh;
+    }
+  }
+
+  section {
+    min-height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 10px;
+
+  }
+  #home {
+    padding: 0;
+
+    .hide {
+      opacity: 0;
+    }
+
+    .logo-link {
+      top: calc(50% - 70px);
+      left: 50%;
+      transform: translate3d(-50%, 0, 0);
+      z-index: 2;
+
+      &.invisible {
+        pointer-events: none;
+      }
+
+      h2 {
+        font-size: 12px;
+        position: absolute;
+        top: 60%;
+        font-weight: 200;
+        transition: all .25s ease-out;
+      }
+    }
+
+
+    .animate {
+      --full-anim: 60s;
+  
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      opacity: 0;
+      animation: animate-home-1 var(--full-anim) infinite;
+      background-repeat: no-repeat;
+  
+      @media (orientation:portrait){
+        background-size: 200vh;
+      }
+  
+      @media (orientation:landscape){
+        background-size: 200vw;
+      }
+    
+      background-repeat: no-repeat;
+  
+      &.animate-1 {
+        animation-delay: 0;
+        opacity: 1;
+        background-position: 0% 100%;
+        // z-index: 4;
+      }
+  
+      &.animate-2 {
+        animation-name: animate-home-2;
+        animation-delay: calc(var(--full-anim) * .25);  
+        background-position: 100% 50%;
+        // z-index: 3;
+      }
+  
+      &.animate-3 {
+        animation-name: animate-home-3;
+        animation-delay: calc(var(--full-anim) * .5);  
+        background-position: 75% 50%;
+        // z-index: 2;
+      }
+  
+      &.animate-4 {
+        animation-name: animate-home-4;
+        animation-delay: calc(var(--full-anim) * .75);  
+        background-position: 50% 75%;
+        // z-index: 1;
+      }
+    }
+  }
+
+  &.desktop {
+    #home {
+      .logo-link {
+        position: fixed;
+
+        img {
+          height: 135px;
+        }
+      }
+    }    
   }
 
   &:not(.on-homepage) {
@@ -504,6 +612,7 @@ a {
 
     #home {
       min-height: 100%;
+      padding: 0;
 
       .logo-link {
         position: absolute;
@@ -569,7 +678,7 @@ a {
       }
     }
 
-    #home ~ section {
+    section {
       padding-top: var(--desktop-nav-height);
     }
 
@@ -735,83 +844,6 @@ a {
   }
 
 
-  #home {
-    padding: 0;
 
-    .hide {
-      opacity: 0;
-    }
-
-    .logo-link {
-      top: calc(50% - 70px);
-      left: 50%;
-      transform: translate3d(-50%, 0, 0);
-      z-index: 2;
-
-      &.invisible {
-        pointer-events: none;
-      }
-
-      h2 {
-        font-size: 12px;
-        position: absolute;
-        top: 60%;
-        font-weight: 200;
-        transition: all .25s ease-out;
-      }
-    }
-
-
-    .animate {
-      --full-anim: 60s;
-  
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      top: 0;
-      bottom: 0;
-      opacity: 0;
-      animation: animate-home-1 var(--full-anim) infinite;
-      background-repeat: no-repeat;
-  
-      @media (orientation:portrait){
-        background-size: 200vh;
-      }
-  
-      @media (orientation:landscape){
-        background-size: 200vw;
-      }
-    
-      background-repeat: no-repeat;
-  
-      &.animate-1 {
-        animation-delay: 0;
-        opacity: 1;
-        background-position: 0% 100%;
-        // z-index: 4;
-      }
-  
-      &.animate-2 {
-        animation-name: animate-home-2;
-        animation-delay: calc(var(--full-anim) * .25);  
-        background-position: 100% 50%;
-        // z-index: 3;
-      }
-  
-      &.animate-3 {
-        animation-name: animate-home-3;
-        animation-delay: calc(var(--full-anim) * .5);  
-        background-position: 75% 50%;
-        // z-index: 2;
-      }
-  
-      &.animate-4 {
-        animation-name: animate-home-4;
-        animation-delay: calc(var(--full-anim) * .75);  
-        background-position: 50% 75%;
-        // z-index: 1;
-      }
-    }
-  }
 
 }
