@@ -16,15 +16,18 @@
             "photos": [
               {
                 "file": "anh1",
-                "title": "Anh 1"
+                "title": "Anh 1",
+                "aspectRatio": "1046 / 1500"
               },
               {
                 "file": "anh2",
-                "title": "Anh 2"
+                "title": "Anh 2",
+                "aspectRatio": "1000 / 1500"
               },
               {
                 "file": "saint-michel",
-                "title": "Saint-Michel"
+                "title": "Saint-Michel",
+                "aspectRatio": "1057 / 1500"
               }
             ]
           },
@@ -33,140 +36,174 @@
             "name" : "La Garenne du Prince",
             "cover" : {
               "file": "haloween-1",
-              "title": "Haloween 1"
+              "title": "Haloween 1",
+              "aspectRatio": "2000 / 1333"
             },
             "photos": [
               {
                 "file": "alexandre-1",
-                "title": "Alexandre 1"
+                "title": "Alexandre 1",
+                "aspectRatio": "1333 / 2000"
               },
               {
                 "file": "alexandre-2",
-                "title": "Alexandre 2"
+                "title": "Alexandre 2",
+                "aspectRatio": "1390 / 2085"
               },
               {
                 "file": "alexandre-3",
-                "title": "Alexandre 3"
+                "title": "Alexandre 3",
+                "aspectRatio": "1667 / 2500"
               },
               {
                 "file": "cinema",
-                "title": "Cinema"
+                "title": "Cinema",
+                "aspectRatio": "1500 / 907"
               },
               {
                 "file": "haloween-1",
-                "title": "Haloween 1"
+                "title": "Haloween 1",
+                "aspectRatio": "2000 / 1333"
               },
               {
                 "file": "haloween-2",
-                "title": "Haloween 2"
+                "title": "Haloween 2",
+                "aspectRatio": "2000 / 1417"
               },
               {
                 "file": "haloween-3",
-                "title": "Haloween 3"
+                "title": "Haloween 3",
+                "aspectRatio": "2000 / 1345"
               },
               {
                 "file": "haloween-4",
-                "title": "Haloween 4"
+                "title": "Haloween 4",
+                "aspectRatio": "1459 / 2000"
               },
               {
                 "file": "haloween-5",
-                "title": "Haloween 5"
+                "title": "Haloween 5",
+                "aspectRatio": "1321 / 2000"
               },
               {
                 "file": "le-manoir-1",
-                "title": "Le Manoir 1"
+                "title": "Le Manoir 1",
+                "aspectRatio": "2000 / 1391"
               },
               {
                 "file": "le-manoir-2",
-                "title": "Le Manoir 2"
+                "title": "Le Manoir 2",
+                "aspectRatio": "1399 / 2000"
               },
               {
                 "file": "le-manoir-3",
-                "title": "Le Manoir 3"
+                "title": "Le Manoir 3",
+                "aspectRatio": "1333 / 2000"
               },
               {
                 "file": "le-manoir-4",
-                "title": "Le Manoir 4"
+                "title": "Le Manoir 4",
+                "aspectRatio": "1333 / 2000"
               },
               {
                 "file": "les-automates_1",
-                "title": "Les Automates 1"
+                "title": "Les Automates 1",
+                "aspectRatio": "1500 / 1052"
               },
               {
                 "file": "les-automates_2",
-                "title": "Les Automates 2"
+                "title": "Les Automates 2",
+                "aspectRatio": "1000 / 1500"
               },
               {
                 "file": "les-automates_3",
-                "title": "Les Automates 3"
+                "title": "Les Automates 3",
+                "aspectRatio": "1000 / 1500"
               },
               {
                 "file": "les-automates_4",
-                "title": "Les Automates 4"
+                "title": "Les Automates 4",
+                "aspectRatio": "1500 / 985"
               },
               {
                 "file": "les-automates_5",
-                "title": "Les Automates 5"
+                "title": "Les Automates 5",
+                "aspectRatio": "1500 / 1000"
               },
               {
                 "file": "les-automates_6",
-                "title": "Les Automates 6"
+                "title": "Les Automates 6",
+                "aspectRatio": "1024 / 1500"
               },
               {
                 "file": "les-automates_7",
-                "title": "Les Automates 7"
+                "title": "Les Automates 7",
+                "aspectRatio": "1500 / 1000"
               },
               {
                 "file": "les-automates_adam-et-eve",
-                "title": "Les Automates - Adam et Eve"
+                "title": "Les Automates - Adam et Eve",
+                "aspectRatio": "1055 / 1500"
               },
               {
                 "file": "nautilus-1",
-                "title": "Nautilus 1"
+                "title": "Nautilus 1",
+                "aspectRatio": "2000 / 1277"
               },
               {
                 "file": "nautilus-2",
-                "title": "Nautilus 2"
+                "title": "Nautilus 2",
+                "aspectRatio": "1334 / 2000"
               },
               {
                 "file": "nautilus-3",
-                "title": "Nautilus 3"
+                "title": "Nautilus 3",
+                "aspectRatio": "2000 / 1334"
               },
               {
                 "file": "nautilus-4",
-                "title": "Nautilus 4"
+                "title": "Nautilus 4",
+                "aspectRatio": "3000 / 2000"
               },
               {
                 "file": "nautilus-5",
-                "title": "Nautilus 5"
+                "title": "Nautilus 5",
+                "aspectRatio": "2000 / 1311"
               },
               {
                 "file": "nautilus-6",
-                "title": "Nautilus 6"
+                "title": "Nautilus 6",
+                "aspectRatio": "2000 / 1383"
               },
               {
                 "file": "nautilus-7",
-                "title": "Nautilus 7"
+                "title": "Nautilus 7",
+                "aspectRatio": "2000 / 1333"
               },
               {
                 "file": "nautilus-8",
-                "title": "Nautilus 8"
+                "title": "Nautilus 8",
+                "aspectRatio": "2000 / 1857"
               },
               {
                 "file": "oups",
-                "title": "Oups"
+                "title": "Oups",
+                "aspectRatio": "2000 / 2347"
               },
               {
                 "file": "quarantaine-1",
-                "title": "Quarantaine 1"
+                "title": "Quarantaine 1",
+                "aspectRatio": "2000 / 1364"
               },
               {
                 "file": "quarantaine-2",
-                "title": "Quarantaine 2"
+                "title": "Quarantaine 2",
+                "aspectRatio": "1333 / 2000"
               },
               {
                 "file": "taxi",
-                "title": "Taxi"
+                "title": "Taxi",
+                "aspectRatio": "965 / 1500"
               }
             ]
           },
@@ -176,60 +213,74 @@
             "highlight": true,
             "cover" : {
               "file": "legraoully",
-              "title": "Le Graoully"
+              "title": "Le Graoully",
+              "aspectRatio": "1595 / 1000"
             },
             "photos": [
               {
                 "file": "europa",
-                "title": "Europa"
+                "title": "Europa",
+                "aspectRatio": "1500 / 911"
               },
               {
                 "file": "finsdesiecles",
-                "title": "Fin de Siècle"
+                "title": "Fin de Siècle",
+                "aspectRatio": "1727 / 1000"
               },
               {
                 "file": "guillaume",
-                "title": "Guillaume"
+                "title": "Guillaume",
+                "aspectRatio": "1250 / 1000"
               },
               {
                 "file": "lafonderie1",
-                "title": "La Fonderie 1"
+                "title": "La Fonderie 1",
+                "aspectRatio": "1500 / 1000"
               },
               {
                 "file": "laura",
-                "title": "Laura"
+                "title": "Laura",
+                "aspectRatio": "1250 / 1000"
               },
               {
                 "file": "lechevalier",
-                "title": "Le Chevalier"
+                "title": "Le Chevalier",
+                "aspectRatio": "1500 / 911"
               },
               {
                 "file": "legraoully",
-                "title": "Le Graoully"
+                "title": "Le Graoully",
+                "aspectRatio": "1595 / 1000"
               },
               {
                 "file": "leroi",
-                "title": "Le Roi"
+                "title": "Le Roi",
+                "aspectRatio": "1500 / 911"
               },
               {
                 "file": "lesforges2",
-                "title": "Les Forges 2"
+                "title": "Les Forges 2",
+                "aspectRatio": "1500 / 911"
               },
               {
                 "file": "lesforges3",
-                "title": "Les Forges 3"
+                "title": "Les Forges 3",
+                "aspectRatio": "1500 / 1000"
               },
               {
                 "file": "ruetaison",
-                "title": "Rue Taison"
+                "title": "Rue Taison",
+                "aspectRatio": "1500 / 911"
               },
               {
                 "file": "venus",
-                "title": "Venus"
+                "title": "Venus",
+                "aspectRatio": "1500 / 911"
               },
               {
                 "file": "venusenmoselle",
-                "title": "Venus en Moselle"
+                "title": "Venus en Moselle",
+                "aspectRatio": "1642 / 1000"
               }
             ]
           },
@@ -242,23 +293,28 @@
             "photos": [
               {
                 "file": "01_eccehomo",
-                "title": "Ecce Homo"
+                "title": "Ecce Homo",
+                "aspectRatio": "691 / 1000"
               },
               {
                 "file": "02_credo",
-                "title": "Credo"
+                "title": "Credo",
+                "aspectRatio": "694 / 1000"
               },
               {
                 "file": "03_surladernierefrontiere",
-                "title": "Sur la Dernière Frontière"
+                "title": "Sur la Dernière Frontière",
+                "aspectRatio": "1752 / 1000"
               },
               {
                 "file": "04_latentationdesaintantoine",
-                "title": "La Tentation de Saint Antoine"
+                "title": "La Tentation de Saint Antoine",
+                "aspectRatio": "1680 / 1000"
               },
               {
                 "file": "05_lacreation",
-                "title": "La Création"
+                "title": "La Création",
+                "aspectRatio": "1000 / 1000"
               }
             ]
           },
@@ -271,47 +327,58 @@
             "photos": [
               {
                 "file": "entree-des-artistes-01",
-                "title": ""
+                "title": "",
+                "aspectRatio": "750 / 1000"
               },
               {
                 "file": "entree-des-artistes-02",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1333 / 1000"
               },
               {
                 "file": "entree-des-artistes-03",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1333 / 1000"
               },
               {
                 "file": "entree-des-artistes-04",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1333 / 1000"
               },
               {
                 "file": "entree-des-artistes-05",
-                "title": ""
+                "title": "",
+                "aspectRatio": "750 / 1000"
               },
               {
                 "file": "entree-des-artistes-06",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1333 / 1000"
               },
               {
                 "file": "entree-des-artistes-07",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1333 / 1000"
               },
               {
                 "file": "entree-des-artistes-08",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1333 / 1000"
               },
               {
                 "file": "entree-des-artistes-09",
-                "title": ""
+                "title": "",
+                "aspectRatio": "750 / 1000"
               },
               {
                 "file": "entree-des-artistes-10",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1222 / 1000"
               },
               {
                 "file": "entree-des-artistes-11",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1333 / 1000"
               }
             ]
           },
@@ -324,23 +391,28 @@
             "photos": [
               {
                 "file": "01_lacommune",
-                "title": "La Commune"
+                "title": "La Commune",
+                "aspectRatio": "1365 / 1000"
               },
               {
                 "file": "02_letombeaudessirenes",
-                "title": "Le Tombeau des Sirènes"
+                "title": "Le Tombeau des Sirènes",
+                "aspectRatio": "1446 / 1000"
               },
               {
                 "file": "03_lesoiseauxmetalliques",
-                "title": "Les Oiseaux Métalliques"
+                "title": "Les Oiseaux Métalliques",
+                "aspectRatio": "1382 / 1000"
               },
               {
                 "file": "04_lesamanites",
-                "title": "Les Amanites"
+                "title": "Les Amanites",
+                "aspectRatio": "1743 / 1000"
               },
               {
                 "file": "05_lamortdudouglas",
-                "title": "La Mort du Douglas"
+                "title": "La Mort du Douglas",
+                "aspectRatio": "1600 / 858"
               }
             ]
           },
@@ -353,91 +425,113 @@
             "photos": [
               {
                 "file": "01_ulrikeetblablabla",
-                "title": "Ulrik et Blablabla"
+                "title": "Ulrik et Blablabla",
+                "aspectRatio": "1000 / 1000"
               },
               {
                 "file": "02_dedos",
-                "title": "De Dos"
+                "title": "De Dos",
+                "aspectRatio": "1000 / 1000"
               },
               {
                 "file": "03_frenchtoast",
-                "title": "French Toast"
+                "title": "French Toast",
+                "aspectRatio": "1000 / 1000"
               },
               {
                 "file": "04_frenchtoast2",
-                "title": "French Toast 2"
+                "title": "French Toast 2",
+                "aspectRatio": "2005 / 1000"
               },
               {
                 "file": "05_frenchtoast3",
-                "title": "French Toast 3"
+                "title": "French Toast 3",
+                "aspectRatio": "1044 / 1000"
               },
               {
                 "file": "06_hoteldumidi2",
-                "title": "Hotel du Midi 2"
+                "title": "Hotel du Midi 2",
+                "aspectRatio": "752 / 1000"
               },
               {
                 "file": "07_hoteldumidi",
-                "title": "Hotel du Midi"
+                "title": "Hotel du Midi",
+                "aspectRatio": "1618 / 1000"
               },
               {
                 "file": "08_hoteldumidi3",
-                "title": "Hotel du Midi 3"
+                "title": "Hotel du Midi 3",
+                "aspectRatio": "1679 / 1000"
               },
               {
                 "file": "09_fraise",
-                "title": "Fraise"
+                "title": "Fraise",
+                "aspectRatio": "667 / 1000"
               },
               {
                 "file": "10_breakfastinhell",
-                "title": "Breakfast in Hell"
+                "title": "Breakfast in Hell",
+                "aspectRatio": "1706 / 1000"
               },
               {
                 "file": "11_lecoeurvolcan",
-                "title": "Le coeur volcan"
+                "title": "Le coeur volcan",
+                "aspectRatio": "678 / 1000"
               },
               {
                 "file": "12_sarah",
-                "title": "Sarah"
+                "title": "Sarah",
+                "aspectRatio": "1407 / 1000"
               },
               {
                 "file": "13_leya",
-                "title": "Leya"
+                "title": "Leya",
+                "aspectRatio": "1000 / 1000"
               },
               {
                 "file": "14_lepalace",
-                "title": "Le Palace"
+                "title": "Le Palace",
+                "aspectRatio": "1495 / 1000"
               },
               {
                 "file": "15_nowhere",
-                "title": "Nowhere"
+                "title": "Nowhere",
+                "aspectRatio": "972 / 1000"
               },
               {
                 "file": "16_sanservolo",
-                "title": "Sanservolo"
+                "title": "Sanservolo",
+                "aspectRatio": "1500 / 987"
               },
               {
                 "file": "17_sanservolo2",
-                "title": "Sanservolo 2"
+                "title": "Sanservolo 2",
+                "aspectRatio": "667 / 1000"
               },
               {
                 "file": "18_sanservolo3",
-                "title": "Sanservolo 3"
+                "title": "Sanservolo 3",
+                "aspectRatio": "766 / 1000"
               },
               {
                 "file": "badabim1",
-                "title": "Badabim 1"
+                "title": "Badabim 1",
+                "aspectRatio": "1500 / 1044"
               },
               {
                 "file": "badabim2",
-                "title": "Badabim 2"
+                "title": "Badabim 2",
+                "aspectRatio": "1500 / 1000"
               },
               {
                 "file": "badabim3",
-                "title": "Badabim 3"
+                "title": "Badabim 3",
+                "aspectRatio": "960 / 1500"
               },
               {
                 "file": "badabim4",
-                "title": "Badabim 4"
+                "title": "Badabim 4",
+                "aspectRatio": "1500 / 1076"
               }
             ]
           },
@@ -450,23 +544,28 @@
             "photos": [
               {
                 "file": "01_saintsebastien",
-                "title": "Saint Sebastien"
+                "title": "Saint Sebastien",
+                "aspectRatio": "1649 / 1000"
               },
               {
                 "file": "02_lepeuple",
-                "title": "Le Peuple"
+                "title": "Le Peuple",
+                "aspectRatio": "1667 / 1000"
               },
               {
                 "file": "03_lacrucifixion",
-                "title": "LA Crucifixion"
+                "title": "LA Crucifixion",
+                "aspectRatio": "584 / 1000"
               },
               {
                 "file": "04_leprince",
-                "title": "Le Prince"
+                "title": "Le Prince",
+                "aspectRatio": "1667 / 1000"
               },
               {
                 "file": "05_laguerre",
-                "title": "La Guerre"
+                "title": "La Guerre",
+                "aspectRatio": "1667 / 1000"
               }
             ]
           },
@@ -479,75 +578,93 @@
             "photos": [
               {
                 "file": "01_lechatnoir",
-                "title": "Le Chat Noir"
+                "title": "Le Chat Noir",
+                "aspectRatio": "1130 / 1000"
               },
               {
                 "file": "02_mara",
-                "title": "Mara"
+                "title": "Mara",
+                "aspectRatio": "1333 / 1000"
               },
               {
                 "file": "03_maraetaudrey",
-                "title": "Mara et Audrey"
+                "title": "Mara et Audrey",
+                "aspectRatio": "1140 / 1000"
               },
               {
                 "file": "04_maraauparfum",
-                "title": "Mara au Parfum"
+                "title": "Mara au Parfum",
+                "aspectRatio": "1333 / 1000"
               },
               {
                 "file": "05_morganneagenoux",
-                "title": "Morganne à genoux"
+                "title": "Morganne à genoux",
+                "aspectRatio": "688 / 1000"
               },
               {
                 "file": "06_lekimono",
-                "title": "Le Kimono"
+                "title": "Le Kimono",
+                "aspectRatio": "1499 / 1000"
               },
               {
                 "file": "07_lesailesdedyna",
-                "title": "Les AIles de Dyna"
+                "title": "Les AIles de Dyna",
+                "aspectRatio": "1333 / 1000"
               },
               {
                 "file": "08_dyna",
-                "title": "Dyna"
+                "title": "Dyna",
+                "aspectRatio": "1503 / 1000"
               },
               {
                 "file": "09_lafleuraufusil",
-                "title": "La Fleur au Fusil"
+                "title": "La Fleur au Fusil",
+                "aspectRatio": "750 / 1000"
               },
               {
                 "file": "10_lesbas",
-                "title": "Les bas"
+                "title": "Les bas",
+                "aspectRatio": "1000 / 1000"
               },
               {
                 "file": "11_anneetaudrey",
-                "title": "Anne et Audrey"
+                "title": "Anne et Audrey",
+                "aspectRatio": "1333 / 1000"
               },
               {
                 "file": "12_morgane",
-                "title": "Morgane"
+                "title": "Morgane",
+                "aspectRatio": "666 / 1000"
               },
               {
                 "file": "13_morganeetaudrey",
-                "title": "Morgane et Audrey"
+                "title": "Morgane et Audrey",
+                "aspectRatio": "1529 / 1000"
               },
               {
                 "file": "14_dynaalafenetre2",
-                "title": "Dyna à la fenêtre 2"
+                "title": "Dyna à la fenêtre 2",
+                "aspectRatio": "1000 / 1000"
               },
               {
                 "file": "15_dynaalafenetre",
-                "title": "Dyna à la fenêtre"
+                "title": "Dyna à la fenêtre",
+                "aspectRatio": "1333 / 1000"
               },
               {
                 "file": "16_paris",
-                "title": "Paris"
+                "title": "Paris",
+                "aspectRatio": "1333 / 1000"
               },
               {
                 "file": "17_annealafenetre",
-                "title": "Anne à la fenêtre"
+                "title": "Anne à la fenêtre",
+                "aspectRatio": "1333 / 1000"
               },
               {
                 "file": "18_annededos",
-                "title": "Anne de dos"
+                "title": "Anne de dos",
+                "aspectRatio": "1250 / 1000"
               }
             ]
           },
@@ -560,55 +677,68 @@
             "photos": [
               {
                 "file": "01_lesenfantsperdus",
-                "title": "Les Enfants Perdus"
+                "title": "Les Enfants Perdus",
+                "aspectRatio": "1238 / 1000"
               },
               {
                 "file": "02_lesenfantsperdu3",
-                "title": "Les Enfants Perdus 3"
+                "title": "Les Enfants Perdus 3",
+                "aspectRatio": "634 / 1000"
               },
               {
                 "file": "03_mariesurlestoits",
-                "title": "Marie sur les Toits"
+                "title": "Marie sur les Toits",
+                "aspectRatio": "1501 / 1000"
               },
               {
                 "file": "04_lastcabaret",
-                "title": "Last Cabaret"
+                "title": "Last Cabaret",
+                "aspectRatio": "1493 / 1000"
               },
               {
                 "file": "05_lavictoire",
-                "title": "La Victoire"
+                "title": "La Victoire",
+                "aspectRatio": "597 / 1000"
               },
               {
                 "file": "06_moinscinq",
-                "title": "Moins Cinq"
+                "title": "Moins Cinq",
+                "aspectRatio": "1517 / 1000"
               },
               {
                 "file": "07_Wihl",
-                "title": "Wihl"
+                "title": "Wihl",
+                "aspectRatio": "1000 / 1000"
               },
               {
                 "file": "08_joprivatestmort",
-                "title": "Jo Privat est mort"
+                "title": "Jo Privat est mort",
+                "aspectRatio": "1629 / 1000"
               },
               {
                 "file": "09_fanfan",
-                "title": "Fanfan"
+                "title": "Fanfan",
+                "aspectRatio": "1503 / 1000"
               },
               {
                 "file": "10_lautomne",
-                "title": "L'automne"
+                "title": "L'automne",
+                "aspectRatio": "1750 / 1000"
               },
               {
                 "file": "11_lesourire",
-                "title": "Le Sourire"
+                "title": "Le Sourire",
+                "aspectRatio": "1502 / 1000"
               },
               {
                 "file": "12_lhiver",
-                "title": "L'hiver"
+                "title": "L'hiver",
+                "aspectRatio": "1146 / 1000"
               },
               {
                 "file": "13_letombeau",
-                "title": "Le Tombeau"
+                "title": "Le Tombeau",
+                "aspectRatio": "1503 / 1000"
               }
             ]
           },
@@ -621,139 +751,173 @@
             "photos": [
               {
                 "file": "01_celine",
-                "title": "Céline"
+                "title": "Céline",
+                "aspectRatio": "661 / 1000"
               },
               {
                 "file": "02_opening",
-                "title": "Opening"
+                "title": "Opening",
+                "aspectRatio": "1966 / 1000"
               },
               {
                 "file": "03_laboitemagique",
-                "title": "La Boîte Magique"
+                "title": "La Boîte Magique",
+                "aspectRatio": "1382 / 1000"
               },
               {
                 "file": "04_lebain",
-                "title": "Le Bain"
+                "title": "Le Bain",
+                "aspectRatio": "1359 / 1000"
               },
               {
                 "file": "05_lepetitbaigneur",
-                "title": "Le Petit Baigneur"
+                "title": "Le Petit Baigneur",
+                "aspectRatio": "665 / 1000"
               },
               {
                 "file": "06_lesailesdudesir",
-                "title": "Les Ailes du Désir"
+                "title": "Les Ailes du Désir",
+                "aspectRatio": "2198 / 1000"
               },
               {
                 "file": "07_lesloges2",
-                "title": "Les loges 2"
+                "title": "Les loges 2",
+                "aspectRatio": "1621 / 1000"
               },
               {
                 "file": "08_lediableetlanuit",
-                "title": "Le Diable et la Nuit"
+                "title": "Le Diable et la Nuit",
+                "aspectRatio": "1501 / 1000"
               },
               {
                 "file": "09_lenainjaune",
-                "title": "Le Nain Jaune"
+                "title": "Le Nain Jaune",
+                "aspectRatio": "984 / 1000"
               },
               {
                 "file": "10_lestontonfarceur1",
-                "title": "Les Tontons Farceurs"
+                "title": "Les Tontons Farceurs",
+                "aspectRatio": "1524 / 1000"
               },
               {
                 "file": "11_lestontonsfarceurs2",
-                "title": "Les Tontons Farceurs 2"
+                "title": "Les Tontons Farceurs 2",
+                "aspectRatio": "984 / 1000"
               },
               {
                 "file": "12_sandrineetsophie",
-                "title": "Sandrine et Sophie"
+                "title": "Sandrine et Sophie",
+                "aspectRatio": "1538 / 1000"
               },
               {
                 "file": "13_sophie",
-                "title": "Sophie"
+                "title": "Sophie",
+                "aspectRatio": "759 / 1000"
               },
               {
                 "file": "14_tavertu",
-                "title": "Ta Vertu"
+                "title": "Ta Vertu",
+                "aspectRatio": "983 / 1000"
               },
               {
                 "file": "15_nowhere",
-                "title": "Nowhere"
+                "title": "Nowhere",
+                "aspectRatio": "1901 / 1000"
               },
               {
                 "file": "16_roadtonowhere",
-                "title": "Road to Nowhere"
+                "title": "Road to Nowhere",
+                "aspectRatio": "1500 / 1000"
               },
               {
                 "file": "17_beautyisdangerous",
-                "title": "Beauty is Dangerous"
+                "title": "Beauty is Dangerous",
+                "aspectRatio": "983 / 1000"
               },
               {
                 "file": "18_beautyissecret",
-                "title": "Beauty is Secret"
+                "title": "Beauty is Secret",
+                "aspectRatio": "744 / 1000"
               },
               {
                 "file": "19_cestlhiverdemain",
-                "title": "C'est l'hiver demain"
+                "title": "C'est l'hiver demain",
+                "aspectRatio": "1966 / 1000"
               },
               {
                 "file": "20_frenchlover1",
-                "title": "French Lover"
+                "title": "French Lover",
+                "aspectRatio": "1656 / 1000"
               },
               {
                 "file": "21_frenchlover2",
-                "title": "French Lover"
+                "title": "French Lover",
+                "aspectRatio": "1656 / 1000"
               },
               {
                 "file": "22_frenchlover3",
-                "title": "French Lover"
+                "title": "French Lover",
+                "aspectRatio": "1656 / 1000"
               },
               {
                 "file": "23_gomina1",
-                "title": "Gomina 1"
+                "title": "Gomina 1",
+                "aspectRatio": "1503 / 1000"
               },
               {
                 "file": "24_gomina2",
-                "title": "Gomina 2"
+                "title": "Gomina 2",
+                "aspectRatio": "1496 / 1000"
               },
               {
                 "file": "25_industrie",
-                "title": "Industrie"
+                "title": "Industrie",
+                "aspectRatio": "1157 / 1000"
               },
               {
                 "file": "26_lachatte",
-                "title": "La Chatte"
+                "title": "La Chatte",
+                "aspectRatio": "594 / 1000"
               },
               {
                 "file": "27_lepetitsoldat",
-                "title": "Le Petit Soldat"
+                "title": "Le Petit Soldat",
+                "aspectRatio": "1376 / 1000"
               },
               {
                 "file": "28_lostguy",
-                "title": "Lost Guy"
+                "title": "Lost Guy",
+                "aspectRatio": "1503 / 1000"
               },
               {
                 "file": "29_flyergin",
-                "title": "Flyer Gin"
+                "title": "Flyer Gin",
+                "aspectRatio": "1311 / 1000"
               },
               {
                 "file": "30_tom",
-                "title": "Tom"
+                "title": "Tom",
+                "aspectRatio": "665 / 1000"
               },
               {
                 "file": "31_estceainsiqueleshommesvivent",
-                "title": "Est-ce ainsi que les hommes vivent"
+                "title": "Est-ce ainsi que les hommes vivent",
+                "aspectRatio": "1675 / 1000"
               },
               {
                 "file": "32_estceainsi2",
-                "title": "Est-ce ainsi que les hommes vivent 2"
+                "title": "Est-ce ainsi que les hommes vivent 2",
+                "aspectRatio": "1503 / 1000"
               },
               {
                 "file": "33_estceainsi3",
-                "title": "Est-ce ainsi que les hommes vivent 3"
+                "title": "Est-ce ainsi que les hommes vivent 3",
+                "aspectRatio": "1503 / 1000"
               },
               {
                 "file": "34_lesoiseaux",
-                "title": "Les oiseaux"
+                "title": "Les oiseaux",
+                "aspectRatio": "665 / 1000"
               }
             ]
           }
@@ -774,67 +938,83 @@
             "photos": [
               {
                 "file": "playful1",
-                "title": "Playful 1"
+                "title": "Playful 1",
+                "aspectRatio": "665 / 1000"
               },
               {
                 "file": "playful2",
-                "title": "Playful 2"
+                "title": "Playful 2",
+                "aspectRatio": "1750 / 978"
               },
               {
                 "file": "playful3",
-                "title": "Playful 3"
+                "title": "Playful 3",
+                "aspectRatio": "1750 / 995"
               },
               {
                 "file": "playful4",
-                "title": "Playful 4"
+                "title": "Playful 4",
+                "aspectRatio": "1302 / 1000"
               },
               {
                 "file": "playful5",
-                "title": "Playful 5"
+                "title": "Playful 5",
+                "aspectRatio": "1500 / 998"
               },
               {
                 "file": "playful6",
-                "title": "Playful 6"
+                "title": "Playful 6",
+                "aspectRatio": "1500 / 998"
               },
               {
                 "file": "playful7",
-                "title": "Playful 7"
+                "title": "Playful 7",
+                "aspectRatio": "1500 / 998"
               },
               {
                 "file": "playful8",
-                "title": "Playful 8"
+                "title": "Playful 8",
+                "aspectRatio": "1500 / 998"
               },
               {
                 "file": "playful9",
-                "title": "Playful 9"
+                "title": "Playful 9",
+                "aspectRatio": "1500 / 916"
               },
               {
                 "file": "playful10",
-                "title": "Playful 10"
+                "title": "Playful 10",
+                "aspectRatio": "693 / 1000"
               },
               {
                 "file": "playful11",
-                "title": "Playful 11"
+                "title": "Playful 11",
+                "aspectRatio": "1500 / 998"
               },
               {
                 "file": "playful12",
-                "title": "Playful 12"
+                "title": "Playful 12",
+                "aspectRatio": "1500 / 998"
               },
               {
                 "file": "playful13",
-                "title": "Playful 13"
+                "title": "Playful 13",
+                "aspectRatio": "684 / 1000"
               },
               {
                 "file": "playful14",
-                "title": "Playful 14"
+                "title": "Playful 14",
+                "aspectRatio": "1500 / 940"
               },
               {
                 "file": "playful15",
-                "title": "Playful 15"
+                "title": "Playful 15",
+                "aspectRatio": "1225 / 1000"
               },
               {
                 "file": "playful16",
-                "title": "Playful 16"
+                "title": "Playful 16",
+                "aspectRatio": "802 / 1000"
               }
             ]
           },
@@ -847,67 +1027,83 @@
             "photos": [
               {
                 "file": "lilith-00",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1352 / 1000"
               },
               {
                 "file": "lilith-01",
-                "title": ""
+                "title": "",
+                "aspectRatio": "667 / 1000"
               },
               {
                 "file": "lilith-02",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1524 / 1000"
               },
               {
                 "file": "lilith-03",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1499 / 1000"
               },
               {
                 "file": "lilith-04",
-                "title": ""
+                "title": "",
+                "aspectRatio": "730 / 1000"
               },
               {
                 "file": "lilith-05",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1499 / 1000"
               },
               {
                 "file": "lilith-06",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1308 / 1000"
               },
               {
                 "file": "lilith-07",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1510 / 1000"
               },
               {
                 "file": "lilith-08",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1499 / 1000"
               },
               {
                 "file": "lilith-09",
-                "title": ""
+                "title": "",
+                "aspectRatio": "667 / 1000"
               },
               {
                 "file": "lilith-10",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1592 / 1000"
               },
               {
                 "file": "lilith-11",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1499 / 1000"
               },
               {
                 "file": "lilith-12",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1499 / 1000"
               },
               {
                 "file": "lilith-13",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1635 / 1000"
               },
               {
                 "file": "lilith-14",
-                "title": ""
+                "title": "",
+                "aspectRatio": "763 / 1000"
               },
               {
                 "file": "lilith-15",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1554 / 1000"
               }
             ]
           },
@@ -920,43 +1116,53 @@
             "photos": [
               {
                 "file": "pamela-de-beaumane-01",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1035 / 1000"
               },
               {
                 "file": "pamela-de-beaumane-02",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1023 / 1000"
               },
               {
                 "file": "pamela-de-beaumane-03",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1501 / 1000"
               },
               {
                 "file": "pamela-de-beaumane-04",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1480 / 1000"
               },
               {
                 "file": "pamela-de-beaumane-05",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1500 / 1000"
               },
               {
                 "file": "pamela-de-beaumane-06",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1500 / 1000"
               },
               {
                 "file": "pamela-de-beaumane-07",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1624 / 1000"
               },
               {
                 "file": "pamela-de-beaumane-08",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1563 / 1000"
               },
               {
                 "file": "pamela-de-beaumane-09",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1760 / 1000"
               },
               {
                 "file": "pamela-de-beaumane-10",
-                "title": ""
+                "title": "",
+                "aspectRatio": "1556 / 1000"
               }
             ]
           },
@@ -965,48 +1171,59 @@
             "name": "Artwork",
             "cover": {
                 "file": "les-yeux-de-la-tete-0",
-                "title": "Les Yeux de la Tête"
+                "title": "Les Yeux de la Tête",
+                "aspectRatio": "1106 / 1000"
             },
             "photos": [
               {
                 "file": "all-that-jazz-1",
-                "title": "All That Jazz"
+                "title": "All That Jazz",
+                "aspectRatio": "1634 / 2322"
               },
               {
                 "file": "all-that-jazz-2",
-                "title": "All That Jazz"
+                "title": "All That Jazz",
+                "aspectRatio": "1291 / 2000"
               },
               {
                 "file": "garcon-de-plage-1",
-                "title": "Garçon de Plage"
+                "title": "Garçon de Plage",
+                "aspectRatio": "2000 / 1852"
               },
               {
                 "file": "garcon-de-plage-2",
-                "title": "Garçon de Plage"
+                "title": "Garçon de Plage",
+                "aspectRatio": "1333 / 2000"
               },
               {
                 "file": "les-yeux-de-la-tete-0",
-                "title": "Les Yeux de la Tête"
+                "title": "Les Yeux de la Tête",
+                "aspectRatio": "1106 / 1000"
               },
               {
                 "file": "les-yeux-de-la-tete-1",
-                "title": "Les Yeux de la Tête"
+                "title": "Les Yeux de la Tête",
+                "aspectRatio": "1389 / 1000"
               },
               {
                 "file": "les-yeux-de-la-tete-2",
-                "title": "Les Yeux de la Tête"
+                "title": "Les Yeux de la Tête",
+                "aspectRatio": "1008 / 1000"
               },
               {
                 "file": "les-yeux-de-la-tete-3",
-                "title": "Les Yeux de la Tête"
+                "title": "Les Yeux de la Tête",
+                "aspectRatio": "1008 / 1000"
               },
               {
                 "file": "les-yeux-de-la-tete-4",
-                "title": "Les Yeux de la Tête"
+                "title": "Les Yeux de la Tête",
+                "aspectRatio": "1000 / 1000"
               },
               {
                 "file": "les-yeux-de-la-tete-5",
-                "title": "Les Yeux de la Tête"
+                "title": "Les Yeux de la Tête",
+                "aspectRatio": "1000 / 1000"
               }
             ]
           }
@@ -1126,16 +1343,17 @@
         "id": "agenda",
         "name": "Agenda",
         "type": "agenda",
+        "background": "agenda",
         "collection": [
           {
             "name": "Exposition Artplexe",
             "location": "à Marseille",
-            "date": "Octobre 2021"
+            "day": "Octobre 2021"
           },
           {
             "name": "Masterclass",
             "location": "à l'Atelier",
-            "date": "18 et 19 Septembre 2021",
+            "day": "18 et 19 Septembre 2021",
             "link": {
               "text": "Infos et Réservations",
               "url": "https://www.leturkshop.com/masterclass"
@@ -1144,7 +1362,7 @@
           {
             "name": "Masterclass",
             "location": "à l'Atelier",
-            "date": "29 et 30 Septembre 2021",
+            "day": "29 et 30 Septembre 2021",
             "link": {
               "text": "Infos et Réservations",
               "url": "https://www.leturkshop.com/masterclass"
@@ -1153,22 +1371,22 @@
           {
             "name": "Youtube Live",
             "location": "sur Adobe France",
-            "date": "18 Mars 2020"
+            "day": "18 Mars 2020"
           },
           {
             "name": "Masterclass",
             "location": "à Toulouse",
-            "date": "14 et 15 Mars 2020"
+            "day": "14 et 15 Mars 2020"
           },
           {
             "name": "Masterclass",
             "location": "à Cheverny",
-            "date": "15 et 16 Février"
+            "day": "15 et 16 Février"
           },
           {
             "name": "Masterclass de 5 jours",
             "location": "à l'Atelier Charles à Metz",
-            "date": "16 au 20 Décembre 2019",
+            "day": "16 au 20 Décembre 2019",
             "link": {
               "text": "Infos et Réservations",
               "url": "https://www.atelier-charles.fr/masterclass-le-turk/?fbclid=IwAR1w1RFdu-vdg56bDwfqxTfZSW9FUDJdYcV9IHe0Xb-E-UWcFjo08Dpx3BU"
@@ -1177,72 +1395,72 @@
           {
             "name": "Shooting / workshop public en partenariat avec Canon",
             "location": "chez Numériphot à Toulouse",
-            "date": "27 et 28 Novembre 2019"
+            "day": "27 et 28 Novembre 2019"
           },
           {
             "name": "Exposition",
             "location": "au Festival Constellations à Metz",
-            "date": "Juin/Septembre 2019"
+            "day": "Juin/Septembre 2019"
           },
           {
             "name": "Exposition",
             "location": "à la Gare de l'Est à Paris",
-            "date": "Juillet/Septembre 2019"
+            "day": "Juillet/Septembre 2019"
           },
           {
             "name": "Exposition rétrospective",
             "location": "à la Basilique Saint Vincent de Metz",
-            "date": "Mai 2019"
+            "day": "Mai 2019"
           },
           {
             "name": "Masterclass construction de décors",
             "location": "à Metz",
-            "date": "6 Avril 2019"
+            "day": "6 Avril 2019"
           },
           {
             "name": "Masterclass pendant le Venezia PHOTO",
             "location": "à Venise",
-            "date": "25/28 Avril 2019"
+            "day": "25/28 Avril 2019"
           },
           {
             "name": "Résidence dans le cadre du Festival \"Photographie mon Amour\"",
             "location": "à Metz",
-            "date": "Février / Avril 2019"
+            "day": "Février / Avril 2019"
           },
           {
             "name": "Masterclass construction de décors",
             "location": "à Paris",
-            "date": "27 Octobre 2018"
+            "day": "27 Octobre 2018"
           },
           {
             "name": "Masterclass",
             "location": "à l'Atelier Fenky, en Alsace",
-            "date": "16 Décembre 2017"
+            "day": "16 Décembre 2017"
           },
           {
             "name": "Salon de la Photo - Séance photo publique - Interviews - Dédicaces",
             "location": "Au stand Normal Magazine",
-            "date": "11 Novembre 2017"
+            "day": "11 Novembre 2017"
           },
           {
             "name": "LeTurk - Masterclass",
             "location": "au recording studio Marseille",
-            "date": "30 Octobre/1er Novembre"
+            "day": "30 Octobre/1er Novembre"
           },
           {
             "name": "Exposition / Vente",
             "location": "à la VAGUE Saint-Paul",
-            "date": "Juillet 2017 / Septembre 2017"
+            "day": "Juillet 2017 / Septembre 2017"
           },
           {
             "name": "Exposition pour le French May à La Galerie - Paris 1839",
             "location": "Hong-Kong",
-            "date": "Mai 2017"
+            "day": "Mai 2017"
           },
           {
             "name": "Masterclass",
             "location": "à Paris",
-            "date": "29 Avril 2017"
+            "day": "29 Avril 2017"
           }
         ]
       },

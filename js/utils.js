@@ -1,4 +1,13 @@
-let imagesRoot, imagesFolder; 
+let imagesRoot, imagesFolder;
+
+const imageFormat = () => {
+  if(browserDetect().includes('safari') || browserDetect().includes('explorer')) {
+    return 'jpg';
+  }
+  else {
+    return 'webp';
+  }
+}
 
 if(window.location.pathname.indexOf('/wip') === -1 || window.location.hostname === 'localhost'){
   imagesRoot = 'images';
@@ -72,12 +81,29 @@ const createElem = (el, ctnr, attrs, where) => {
   return element;
 }
 
-const generateMenuLink = (group, item, path) => {
-  console.log(group.type);
+const highLightLink = (elem, hash, path) => {
+  if(hash.includes(path.replace('#',''))) {
+    elem.classList.add('active');
+  }
+  else {
+    elem.classList.remove('active');
+  }
+}
+
+const toggleLinksHighLight = (hash) => {
+  [...document.querySelectorAll('header a')].map(link => {
+    highLightLink(link, hash, link.getAttribute('href'));
+  })
+}
+
+const generateMenuLink = (group, item, path, hash) => {
+
   let menuLink = createElem('a', item, {
     href: `${(group.type === 'link') ? `${group.url}` : `#${path}`}`
   });
   
+  highLightLink(menuLink, hash, path);
+
   if(group.type === 'link') {
     setAttributes(menuLink, {
       target: '_blank'
@@ -94,7 +120,7 @@ const generateMenuLink = (group, item, path) => {
   menuLink.innerText = `${group.name}`;
 }
 
-const generateLogoLink = (container, category, target) => {
+const generateLogoLink = (container, category, hash, target) => {
   const logoLink = createElem('a', container, {
     href: `#${(target !== undefined) ? `${target}` : ''}`,
     class: 'logo-link',
@@ -111,27 +137,47 @@ const generateLogoLink = (container, category, target) => {
   }
 }
 
-const createImage = (imgElem, imgSrc, toBackground) => {
+const toggleLoaded = (elem, loaded) => {
+  if(loaded) {
+    elem.classList.remove('loading');
+    elem.classList.add('loaded');
+  }
+  else {
+    elem.classList.add('loading');
+  }
+}
+
+const createImage = (imgElem, imgSrc, toBackground, zoomButtons) => {
   // console.log(imgElem, imgSrc);
+
+  const container = imgElem.parentElement;
+
+  toggleLoaded(container);
+
   const newImg = new Image();
 
   const loaded = () => {
-    getAspectRatio(imgElem);
+    setTimeout(function() {
+      if(toBackground) {
+        setAttributes(imgElem.parentElement, {
+          style: `background-image: url(${imgSrc})`
+        });
+        // imgElem.parentElement.style += `background-image: url(${imgSrc})`;
+
+        imgElem.parentElement.classList.add('bg-img');
+      }
+      getAspectRatio(imgElem, (zoomButtons) ? zoomButtons : null);
+      toggleLoaded(container, true);
+    });
   }
 
   newImg.onload = function() {
     imgElem.src = this.src;
-
-    if(toBackground) {
-      setAttributes(imgElem.parentElement, {
-        style: `background-image: url(${imgSrc})`
-      });
-
-      // imgElem.parentElement.style += `background-image: url(${imgSrc})`;
-
-      imgElem.parentElement.classList.add('bg-img');
-    }
   }
+  newImg.onerror = function() {
+    imgElem.src = this.src.replace('webp', 'jpg');
+  }
+
   newImg.src = imgSrc;
 
   if (imgElem.complete) {
@@ -145,10 +191,16 @@ const createImage = (imgElem, imgSrc, toBackground) => {
 
 }
 
-const getAspectRatio = (img) => {
+const getAspectRatio = (img, zoomButtons) => {
+
   let imgWidth = img.naturalWidth;
   let imgHeight = img.naturalHeight;
+  let imgInitialWidth = img.width;
+  let imgInitialHeight = img.height;
   let ratio;
+
+
+  let container = img.parentElement;
 
   if(imgWidth > imgHeight) {
     ratio = 'landscape';
@@ -160,11 +212,37 @@ const getAspectRatio = (img) => {
     ratio = 'square';
   }
 
-  img.parentElement.classList.add(ratio);
-  img.parentElement.dataset.aspectRatio = `${imgWidth} / ${imgHeight}`;
-  img.parentElement.dataset.naturalWidth = `${imgWidth}`;
-  img.parentElement.dataset.naturalHeight = `${imgHeight}`;
-  img.style = ` --aspect-ratio: ${imgWidth} / ${imgHeight}`;
+  container.classList.add(ratio);
+  container.dataset.aspectRatio = `${imgWidth} / ${imgHeight}`;
+  container.dataset.orientation = `${ratio}`;
+  container.dataset.naturalWidth = `${imgWidth}`;
+  container.dataset.naturalHeight = `${imgHeight}`;
+  container.dataset.initialWidth = `${imgInitialWidth}`;
+  container.dataset.initialHeight = `${imgInitialHeight}`;
+
+  if(img.naturalWidth === 0) {
+    setTimeout(function(){
+      getAspectRatio(img, zoomButtons);
+    }, 100);
+  }
+
+  else {
+    if(zoomButtons) {
+      img.style = ` --aspect-ratio: ${imgWidth} / ${imgHeight}; width: ${imgInitialWidth}px; height: ${imgInitialHeight};`;
+      
+      const imgWrapper = createElem('span', container, {
+        class: `${(viewPort === 'desktop') ? 'dragscroll' : ''}`,
+      });
+
+      if(typeof dragscroll !== undefined) {
+        dragscroll.reset();
+      }
+
+      imgWrapper.appendChild(img);
+
+      enableZoom(container, imgWrapper, zoomButtons);
+    }
+  }
 
 }
 
@@ -224,36 +302,96 @@ const getMediaPopin = (originElem, elemData, container, type) => {
 
   emptyContainer(popinToolbar);
 
-  console.log(originElem.previousSibling);
-  console.log(originElem.nextSibling);
-
   const popinContainer = document.querySelector('#media-popin-container') || createElem('div', mediaPopin, {
     id: "media-popin-container"
   });
 
-  // if(popinToolbar.innerHTML.length === 0) {
-    if(type === 'photos') {
-      const btnZoomImage = createElem('button', popinToolbar, {
-        id: 'zoom-image'
-      })
-      btnZoomImage.innerText = 'Ñ';
-    }
+  if(originElem.previousSibling) {
+    const btnPrevious = createElem('button', popinToolbar, {
+      class: 'btn-go previous'
+    });
 
-    const btnClosePopin = createElem('button', popinToolbar, {
-      id: 'close-popin'
-    })
-    btnClosePopin.innerText = 'Î';
-  // }
+    btnPrevious.innerText = 'Ô';
+
+    btnPrevious.onclick = () => {
+      // emptyContainer(popinContainer);
+      originElem.previousSibling.querySelector('button').click();
+    }
+  }
+  if(originElem.nextSibling) {
+    const btnNext = createElem('button', popinToolbar, {
+      class: 'btn-go next'
+    });
+
+    btnNext.innerText = '×';
+
+    btnNext.onclick = () => {
+      // emptyContainer(popinContainer);
+      originElem.nextSibling.querySelector('button').click();
+    }
+  }
+
+  let zoomButtons;
+
+  if(type === 'photos') {
+    zoomButtons = createElem('div', popinToolbar, {
+      id: 'zoom-buttons',
+      class: `${viewPort}`
+    });
+    
+    const btnZoomImage = createElem('label', zoomButtons, {
+      for: 'zoom-image'
+    });
+
+    const checkboxZoomImage = createElem('input', zoomButtons, {
+      type: 'checkbox',
+      id: 'zoom-image'
+    });
+    btnZoomImage.innerText = 'Ñ';
+  }
+
+  const btnClosePopin = createElem('button', popinToolbar, {
+    id: 'close-popin'
+  })
+  btnClosePopin.innerText = 'Î';
 
 
   btnClosePopin.onclick = function() {
     closePopin(mediaPopin, popinContainer);
   }
 
-  return {mediaPopin, popinToolbar, popinContainer};
+  return {mediaPopin, popinToolbar, popinContainer, zoomButtons};
 }
 
-const insertContentInPopin = (elemData, type, container, originElem) => {
+const zoomImage = (container, imgWrapper, value) => {
+  container.classList.add('zoom');
+  const image = imgWrapper.querySelector('img');
+  image.style = `width: ${value}px`;
+
+  imgWrapper.scrollTo((image.width - imgWrapper.offsetWidth) / 2, (image.height - imgWrapper.offsetHeight) / 2)
+
+}
+
+const enableZoom = (container, imgWrapper, zoomButtons) => {
+  console.log(container.dataset.orientation);
+  const imgData = container.dataset;
+
+  const rangeWrapper = createElem('div', zoomButtons);
+
+  const zoomRange = createElem('input', rangeWrapper, {
+    type: 'range',
+    step: '1',
+    min: `${imgData.initialWidth}`,
+    value: `${imgData.initialWidth}`,
+    max: `${imgData.naturalWidth}`,
+  });
+
+  zoomRange.oninput = function() {
+    zoomImage(container, imgWrapper, zoomRange.value);
+  }
+}
+
+const insertContentInPopin = (elemData, type, container, originElem, zoomButtons) => {
 
   let popinContent;
 
@@ -264,7 +402,8 @@ const insertContentInPopin = (elemData, type, container, originElem) => {
         webkitallowfullscreen: "",
         mozallowfullscreen: "",
         allowfullscreen: "",
-        frameborder: "0"
+        frameborder: "0",
+        class: "loading"
       });
     break;
 
@@ -272,9 +411,10 @@ const insertContentInPopin = (elemData, type, container, originElem) => {
       popinContent = createElem('div', container, {
         class: `${type}`
       });
+
       const popinImage = createElem('img', popinContent);
 
-      createImage(popinImage, originElem.querySelector('img').src.replace('default', 'full'));
+      createImage(popinImage, originElem.querySelector('img').src.replace('default', 'full'), null, zoomButtons);
     break;
   }
 }
@@ -283,7 +423,9 @@ const toPopin = (originElem, elemData, container, type) => {
 
   const popin = getMediaPopin(originElem, elemData, container, type);
 
-  insertContentInPopin(elemData, type, popin.popinContainer, originElem);
+  emptyContainer(popin.popinContainer);
+
+  insertContentInPopin(elemData, type, popin.popinContainer, originElem, popin.zoomButtons);
 
   toggleScroll(pageScroller, 'disable');
 
@@ -297,22 +439,37 @@ const toPopin = (originElem, elemData, container, type) => {
 
 
 const scrollToElem = (hash) => {
-  if(arrayHomePage.includes(hash)) {
+  
+  if(pageChange === true) {
+    window.location.hash = hash;
+  }
+
+  if(arrayHomePage.includes(hash.replace('#',''))) {
+
 
     if(hash.charAt(0) !== '#') {
       hash = `#${hash}`;
     }
-
+    
     $(function() {
       var scroller = (viewPort === "mobile") ? '#main-container' : 'html, body';
+
+      var scrollAmount;
+
+      if(viewPort === 'mobile') {
+        scrollAmount = $((hash === '#') ? 'body' : hash).position().top;
+      } else {
+        scrollAmount = $((hash === '#') ? 'body' : hash).offset().top;
+      }
+
       $(scroller).animate({
-        scrollTop: $((hash === '#') ? 'body' : hash).offset().top
+        scrollTop: scrollAmount
       }, 250, function() {
         window.location.hash = hash;
       });
 
     });
-    
+
   }
 }
 
@@ -320,12 +477,9 @@ const scrollToElem = (hash) => {
 const dirtyHack = (elem, event) => {
   let hash = elem.hash;
 
-  if(arrayHomePage.includes(hash)) {
+  if(arrayHomePage.includes(hash.replace('#',''))) {
     event.preventDefault();
 
     scrollToElem(hash);
-  }
-  else {
-    return true;
   }
 }

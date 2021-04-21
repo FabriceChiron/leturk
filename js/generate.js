@@ -1,4 +1,7 @@
 let viewPort, currentHash, isHomepage, wasHomepage, pageScroller;
+let pageChange = true;
+let lastScrollTop = 0;
+let scrollDirection = 'down';
 
 const md = new MobileDetect(window.navigator.userAgent);
 
@@ -30,15 +33,18 @@ const hashHandler = (viewPortChange) => {
     pageChange = false;
   }
 
-
   else {
     pageChange = true;
+    pageScroller.scrollTo(0, 0);
+    scrollDirection = 'down';
   }
   
   if(viewPortChange || pageChange) {
     // console.table(`currentHash: ${currentHash}`, `viewPortChange: ${viewPortChange}`, `pageChange: ${pageChange}`)
-    generateStructure(viewPort, newHash, isHomepage);
+    generateStructure(viewPort, newHash, isHomepage, pageChange);
   }
+
+  toggleLinksHighLight(newHash);
 
   currentHash = newHash;
   
@@ -61,6 +67,7 @@ const initViewPort = () => {
 
 
   if((newViewPort != viewPort) || !viewPort) {
+
     viewPort = newViewPort;
     
     getPageScroller(viewPort);
@@ -92,16 +99,18 @@ const generateBurgerMenu = (container) => {
 }
 
 
-const generateStructure = (viewPort, hash, isHomepage) => {
+const generateStructure = (viewPort, hash, isHomepage, pageChange) => {
 
   console.log(`Generating page`);
 
   fetch('data/content.json')
   .then(res => res.json())
   .then(data => {
-    generateMenu(data.content, hash, isHomepage);
 
-    generateContent(data.content, hash, isHomepage);
+    console.log(pageChange);
+    generateMenu(data.content, hash, isHomepage, pageChange);
+
+    generateContent(data.content, hash, isHomepage, pageChange);
   });
 
 }

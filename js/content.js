@@ -1,58 +1,57 @@
-const generatePage = (collection, mainContainer, type) => {
-  switch(type) {
-    case 'photos':
-      const photosHolder = createElem('div', mainContainer, {
-        class: 'photos-holder'
-      });
-      
-      collection.photos.map(photo => {
-        const photoTile = createElem('div', photosHolder, {
-          class: 'photo-tile'
-        });
+const generatePageGallery = (collection, mainContainer, type) => {
 
-        const tileImage = createElem('img', photoTile);
-        createImage(tileImage, `${imagesRoot}/${imagesFolder}/${collection.id}/default/${photo.file}.jpg`);
+  const photosHolder = createElem('div', mainContainer, {
+    class: `photos-holder ${(viewPort === 'desktop') ? 'dragscroll' : ''}`
+  });
+  
+  collection.photos.map(photo => {
+    const photoTile = createElem('div', photosHolder, {
+      class: 'photo-tile'
+    });
 
-        const infosImage = createElem('div', photoTile, {
-          class: 'infos-image'
-        });
+    const tileImage = createElem('img', photoTile, {
+      style: `aspect-ratio: ${photo.aspectRatio}`
+    });
+    createImage(tileImage, `${imagesRoot}/${imagesFolder}/${collection.id}/default/${photo.file}.jpg`, null);
 
-        const toolbarImage = createElem('div', photoTile, {
-          class: 'toolbar'
-        }, 'prepend');
+    const infosImage = createElem('div', photoTile, {
+      class: 'infos-image'
+    });
 
-        const btnZoomImage = createElem('button', toolbarImage);
-        btnZoomImage.innerText = 'Ñ';
+    const toolbarImage = createElem('div', photoTile, {
+      class: 'toolbar'
+    }, 'prepend');
 
-        btnZoomImage.onclick = function() {
-          toPopin(photoTile, collection, mainContainer, type);
-        }
-        
-        const photoCopyRight = createElem('div', infosImage, {
-          class: 'copyright'
-        }).innerHTML = `&copy LeTurk`;
+    const btnZoomImage = createElem('button', toolbarImage);
+    btnZoomImage.innerText = 'Ñ';
 
-        if(photo.title) {
-          const photoTitle = createElem('h2', infosImage).innerText = `${photo.title}`;
-        }
+    btnZoomImage.onclick = function() {
+      toPopin(photoTile, collection, mainContainer, type);
+    }
+    
+    const photoCopyRight = createElem('div', infosImage, {
+      class: 'copyright'
+    }).innerHTML = `&copy LeTurk`;
 
-        if(viewPort === 'desktop') {
-          photoTile.ondblclick = function() {
-            toPopin(photoTile, collection, mainContainer, type);
-          }
-        } 
+    if(photo.title) {
+      const photoTitle = createElem('h2', infosImage).innerText = `${photo.title}`;
+    }
 
-        if(viewPort === 'mobile') {
-          photoTile.onclick = function() {
-            toPopin(photoTile, collection, mainContainer, type);
-          }
-        } 
-      });
-    break;
-  }
+    if(viewPort === 'desktop') {
+      photoTile.ondblclick = function() {
+        toPopin(photoTile, collection, mainContainer, type);
+      }
+    } 
+
+    if(viewPort === 'mobile') {
+      tileImage.onclick = function() {
+        toPopin(photoTile, collection, mainContainer, type);
+      }
+    } 
+  });
 }
 
-const generateSection = (category, mainContainer, content) => {
+const generateSection = (category, mainContainer, content, hash) => {
   const categorySection = createElem('section', mainContainer, {
     id: `${category.id}`
   }, (category.type === 'home') ? 'prepend' : null);
@@ -72,7 +71,7 @@ const generateSection = (category, mainContainer, content) => {
         })
       })
 
-      generateLogoLink(categorySection, category, content.categories[0].id);
+      generateLogoLink(categorySection, category, hash, content.categories[0].id);
 
       // jQuery Hack for non-chromium browsers;
       // dirtyHack();
@@ -80,9 +79,11 @@ const generateSection = (category, mainContainer, content) => {
     break;
     
     case 'photos':
-      categoryTitle = createElem('h2', categorySection);
+      categoryTitle = createElem('h2', categorySection, {
+        class: 'section-title'
+      });
 
-      categoryTitle.innerText = category.name;
+      categoryTitle.innerHTML = `<span>${category.name}</span>`;
 
       tilesHolder = createElem('div', categorySection, {
         class: 'tiles-holder'
@@ -90,7 +91,7 @@ const generateSection = (category, mainContainer, content) => {
 
       category.collection.map(collection => {
         const tile = createElem('a', tilesHolder, {
-          class: `tile ${(collection.highlight && collection.highlight === true) && 'highlight'}`,
+          class: `tile ${(collection.highlight && collection.highlight === true) ? 'highlight' : ''}`,
           id: `${collection.id}`,
           href: `#${category.id}/${collection.id}`
         }, (collection.highlight && collection.highlight === true) && 'prepend');
@@ -107,7 +108,12 @@ const generateSection = (category, mainContainer, content) => {
           coverImage = collection.photos[0];
         }
         
-        const tileImage = createElem('img', tile);
+        console.log(coverImage.file);
+
+        const tileImage = createElem('img', tile, {
+          style: `aspect-ratio: ${coverImage.aspectRatio}`
+        });
+
 
         createImage(tileImage, `${imagesRoot}/${imagesFolder}/${collection.id}/default/${coverImage.file}.jpg`, true);
 
@@ -122,8 +128,11 @@ const generateSection = (category, mainContainer, content) => {
     break;
 
     case 'videos':
-      categoryTitle = createElem('h2', categorySection);
-      categoryTitle.innerText = category.name;
+      categoryTitle = createElem('h2', categorySection, {
+        class: 'section-title'
+      });
+
+      categoryTitle.innerHTML = `<span>${category.name}</span>`;
 
       tilesHolder = createElem('div', categorySection, {
         class: 'tiles-holder'
@@ -131,7 +140,7 @@ const generateSection = (category, mainContainer, content) => {
 
       category.collection.map(collection => {
         const tile = createElem('div', tilesHolder, {
-          class:`tile ${collection.type} ${(collection.highlight && collection.highlight === true) && 'highlight'}`,
+          class:`tile ${collection.type} ${(collection.highlight && collection.highlight === true) ? 'highlight' : ''}`,
           id: `video-${collection.id}`,
         }, (collection.highlight && collection.highlight === true) && 'prepend');
 
@@ -160,43 +169,88 @@ const generateSection = (category, mainContainer, content) => {
   }
 }
 
+const generatePageAgenda = (category, mainContainer) => {
+  const agendaHolder = createElem('div', mainContainer, {
+    class:'agenda-holder',
+    style: `background-image: url('${imagesRoot}/${imagesFolder}/backgrounds/${category.background}.jpg')`
+  });
 
-const generateContent = (content, hash, isHomepage) => {
+  const agendaContainer = createElem('div', agendaHolder, {
+    class:'agenda-container'
+  });
+
+  const agendaList = createElem('ul', agendaContainer, {
+    class: 'events-list'
+  })
+
+  category.collection.map(eventDate => {
+    eventItem = createElem('li', agendaList);
+
+    eventName = createElem('span', eventItem, {
+      class:'name'
+    })
+    eventName.innerText = `${eventDate.name}`;
+
+    eventLocation = createElem('span', eventItem, {
+      class:'location'
+    })
+    eventLocation.innerText = `${eventDate.location}`;
+
+    eventDay = createElem('span', eventItem, {
+      class:'date'
+    })
+    eventDay.innerText = `${eventDate.day}`;
+
+  })
+}
+
+
+const generateContent = (content, hash, isHomepage, pageChange) => {
+  console.log('generating content');
+
   const mainContainer = document.querySelector('#main-container');
 
   setAttributes(mainContainer, {
     class: viewPort
   });
 
-  mainContainer.innerHTML = '';
+  emptyContainer(mainContainer);
+
   console.log(mainContainer.innerHTML.length > 0);
 
     content.categories.map((category, index) => {
 
       if(isHomepage) {
         if(category.onHome === true) {
-          generateSection(category, mainContainer, content);
+          generateSection(category, mainContainer, content, hash);
+        }
+   
+        if(index === content.categories.length - 1) {
+          console.log(`autoscroll to ${hash}`);
+          setTimeout(function() {
+            scrollToElem(`#${hash}`);
+          }, transitionSpeed * 2);
         }
       }
-      else {
+      
+      else if(category.type === "photos") {
         const splitHash = hash.split('/');
 
         if(category.id === splitHash[0]) {
 
           category.collection.map(collection => {
             if(collection.id === splitHash[1]) {
-              generatePage(collection, mainContainer, category.type);
+              generatePageGallery(collection, mainContainer, category.type);
             }
           });
         }
-
       }
 
-      if(index === content.categories.length - 1) {
-        setTimeout(function() {
-          scrollToElem(`#${hash}`);
-        }, transitionSpeed * 2);
+      else if(category.type === "agenda") {
+        generatePageAgenda(category, mainContainer);
       }
+
+
     });
 
 }
