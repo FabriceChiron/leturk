@@ -1,53 +1,61 @@
-const generatePageGallery = (collection, mainContainer, type) => {
+const generatePageGallery = (collection, mainContainer, type,) => {
+
+  const galleryName = createElem('h1', mainContainer, {
+    class: 'gallery-title'
+  });
+  galleryName.innerText = `${collection.name}`;
 
   const photosHolder = createElem('div', mainContainer, {
     class: `photos-holder ${(viewPort === 'desktop') ? 'dragscroll' : ''}`
   });
+
   
   collection.photos.map(photo => {
-    const photoTile = createElem('div', photosHolder, {
-      class: 'photo-tile'
-    });
+    if(!photo.hidden) {
+      const photoTile = createElem('div', photosHolder, {
+        class: 'photo-tile'
+      });
 
-    const tileImage = createElem('img', photoTile, {
-      style: `aspect-ratio: ${photo.aspectRatio}`
-    });
-    createImage(tileImage, `${imagesRoot}/${imagesFolder}/${collection.id}/default/${photo.file}.jpg`, null);
+      const tileImage = createElem('img', photoTile, {
+        style: `aspect-ratio: ${photo.aspectRatio}`
+      });
+      createImage(tileImage, `${imagesRoot}/${imagesFolder}/${collection.id}/default/${photo.file}.jpg`, null);
 
-    const infosImage = createElem('div', photoTile, {
-      class: 'infos-image'
-    });
+      const infosImage = createElem('div', photoTile, {
+        class: 'infos-image'
+      });
 
-    const toolbarImage = createElem('div', photoTile, {
-      class: 'toolbar'
-    }, 'prepend');
+      const toolbarImage = createElem('div', photoTile, {
+        class: 'toolbar'
+      }, 'prepend');
 
-    const btnZoomImage = createElem('button', toolbarImage);
-    btnZoomImage.innerText = 'Ñ';
+      const btnZoomImage = createElem('button', toolbarImage);
+      btnZoomImage.innerText = 'Ñ';
 
-    btnZoomImage.onclick = function() {
-      toPopin(photoTile, collection, mainContainer, type);
-    }
-    
-    const photoCopyRight = createElem('div', infosImage, {
-      class: 'copyright'
-    }).innerHTML = `&copy LeTurk`;
-
-    if(photo.title) {
-      const photoTitle = createElem('h2', infosImage).innerText = `${photo.title}`;
-    }
-
-    if(viewPort === 'desktop') {
-      photoTile.ondblclick = function() {
-        toPopin(photoTile, collection, mainContainer, type);
+      btnZoomImage.onclick = function() {
+        toPopin(photoTile, collection, document.body, type);
       }
-    } 
+      
+      const photoCopyRight = createElem('div', infosImage, {
+        class: 'copyright'
+      }).innerHTML = `&copy LeTurk`;
 
-    if(viewPort === 'mobile') {
-      tileImage.onclick = function() {
-        toPopin(photoTile, collection, mainContainer, type);
+      if(photo.title) {
+        const photoTitle = createElem('h2', infosImage).innerText = `${photo.title}`;
       }
-    } 
+
+      if(viewPort === 'desktop') {
+        photoTile.ondblclick = function() {
+          toPopin(photoTile, collection, document.body, type);
+        }
+      } 
+
+      if(viewPort === 'mobile') {
+        tileImage.onclick = function() {
+          toPopin(photoTile, collection, document.body, type);
+        }
+      } 
+    }
   });
 }
 
@@ -65,10 +73,14 @@ const generateSection = (category, mainContainer, content, hash) => {
   switch(category.type) {
     case 'home':
       category.animation.map(animationItem => {
-        createElem('div', categorySection, {
+        const animDiv = createElem('div', categorySection, {
           class: `animate ${animationItem.animationClass}`,
           style: `background-image: url(${imagesRoot}/${imagesFolder}/${category.id}/${animationItem.file}.jpg)`
-        })
+        });
+
+        const animImage = createElem('img', animDiv);
+
+        createImage(animImage, `${imagesRoot}/${imagesFolder}/${category.id}/${animationItem.file}.jpg`, true);
       })
 
       generateLogoLink(categorySection, category, hash, content.categories[0].id);
@@ -107,8 +119,6 @@ const generateSection = (category, mainContainer, content, hash) => {
         else {
           coverImage = collection.photos[0];
         }
-        
-        console.log(coverImage.file);
 
         const tileImage = createElem('img', tile, {
           style: `aspect-ratio: ${coverImage.aspectRatio}`
@@ -121,7 +131,7 @@ const generateSection = (category, mainContainer, content, hash) => {
         tileTitle.innerText = `${collection.name}`;
 
         // tile.onclick = function() {
-        //   toPopin(tile, collection, mainContainer, category.type);
+        //   toPopin(tile, collection, document.body, category.type);
         // }
 
       });
@@ -162,7 +172,7 @@ const generateSection = (category, mainContainer, content, hash) => {
         tileBtn.dataset.href = `${collection.url}`;
 
         tileBtn.onclick = function() {
-          toPopin(tile, collection, mainContainer, category.type);
+          toPopin(tile, collection, document.body, category.type);
         }
       });
     break;
@@ -185,21 +195,37 @@ const generatePageAgenda = (category, mainContainer) => {
 
   category.collection.map(eventDate => {
     eventItem = createElem('li', agendaList);
+    
+    eventDayContainer = createElem('div', eventItem, {
+      class:'date'
+    });
+    
+    eventDay = createElem('span', eventDayContainer)
+    eventDay.innerText = `${eventDate.day}`;
 
-    eventName = createElem('span', eventItem, {
+
+    eventInfosContainer = createElem('div', eventItem);
+
+    eventName = createElem('span', eventInfosContainer, {
       class:'name'
     })
     eventName.innerText = `${eventDate.name}`;
 
-    eventLocation = createElem('span', eventItem, {
+    eventLocation = createElem('span', eventInfosContainer, {
       class:'location'
     })
     eventLocation.innerText = `${eventDate.location}`;
 
-    eventDay = createElem('span', eventItem, {
-      class:'date'
-    })
-    eventDay.innerText = `${eventDate.day}`;
+
+    if(eventDate.link) {
+      console.log(eventDate.link);
+      eventLinkContainer = createElem('div', eventInfosContainer);
+      eventLink = createElem('a', eventLinkContainer, {
+        href: `${eventDate.link.url}`,
+        target: '_blank'
+      });
+      eventLink.innerText = `${eventDate.link.text}`;
+    }
 
   })
 }
@@ -233,22 +259,25 @@ const generateContent = (content, hash, isHomepage, pageChange) => {
         }
       }
       
-      else if(category.type === "photos") {
+      else {
         const splitHash = hash.split('/');
+        
+        if(category.type === "photos") {
 
-        if(category.id === splitHash[0]) {
+          if(category.id === splitHash[0]) {
 
-          category.collection.map(collection => {
-            if(collection.id === splitHash[1]) {
-              generatePageGallery(collection, mainContainer, category.type);
-            }
-          });
+            category.collection.map(collection => {
+              if(collection.id === splitHash[1]) {
+                generatePageGallery(collection, mainContainer, category.type);
+              }
+            });
+          }
+        }
+        if(category.type === "agenda" && category.id === splitHash[0]) {
+          generatePageAgenda(category, mainContainer);
         }
       }
 
-      else if(category.type === "agenda") {
-        generatePageAgenda(category, mainContainer);
-      }
 
 
     });

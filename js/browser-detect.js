@@ -30,3 +30,22 @@ const browserDetect = () => {
 
   return sBrowser.toLowerCase();
 }
+
+
+// let callback = (entries, observer) => {
+//   entries.forEach(entry => {
+//     console.log(entry);
+//     console.log(entry.isIntersecting);
+//   });
+// };
+
+// let options = {
+//   root: document.body,
+//   rootMargin: '0px',
+//   threshold: 1.0
+// }
+
+// let observer = new IntersectionObserver(callback, options);
+
+// let target = document.querySelector('.astralBody.planet');
+// observer.observe(target);

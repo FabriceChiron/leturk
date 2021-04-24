@@ -56,11 +56,6 @@
                 "aspectRatio": "1667 / 2500"
               },
               {
-                "file": "cinema",
-                "title": "Cinema",
-                "aspectRatio": "1500 / 907"
-              },
-              {
                 "file": "haloween-1",
                 "title": "Haloween 1",
                 "aspectRatio": "2000 / 1333"
@@ -104,46 +99,6 @@
                 "file": "le-manoir-4",
                 "title": "Le Manoir 4",
                 "aspectRatio": "1333 / 2000"
-              },
-              {
-                "file": "les-automates_1",
-                "title": "Les Automates 1",
-                "aspectRatio": "1500 / 1052"
-              },
-              {
-                "file": "les-automates_2",
-                "title": "Les Automates 2",
-                "aspectRatio": "1000 / 1500"
-              },
-              {
-                "file": "les-automates_3",
-                "title": "Les Automates 3",
-                "aspectRatio": "1000 / 1500"
-              },
-              {
-                "file": "les-automates_4",
-                "title": "Les Automates 4",
-                "aspectRatio": "1500 / 985"
-              },
-              {
-                "file": "les-automates_5",
-                "title": "Les Automates 5",
-                "aspectRatio": "1500 / 1000"
-              },
-              {
-                "file": "les-automates_6",
-                "title": "Les Automates 6",
-                "aspectRatio": "1024 / 1500"
-              },
-              {
-                "file": "les-automates_7",
-                "title": "Les Automates 7",
-                "aspectRatio": "1500 / 1000"
-              },
-              {
-                "file": "les-automates_adam-et-eve",
-                "title": "Les Automates - Adam et Eve",
-                "aspectRatio": "1055 / 1500"
               },
               {
                 "file": "nautilus-1",
@@ -201,9 +156,55 @@
                 "aspectRatio": "1333 / 2000"
               },
               {
+                "file": "cinema",
+                "title": "Cinema",
+                "aspectRatio": "1500 / 907"
+              },
+              {
+                "file": "les-automates_1",
+                "title": "Les Automates 1",
+                "aspectRatio": "1500 / 1052"
+              },
+              {
+                "file": "les-automates_2",
+                "title": "Les Automates 2",
+                "aspectRatio": "1000 / 1500"
+              },
+              {
+                "file": "les-automates_3",
+                "title": "Les Automates 3",
+                "aspectRatio": "1000 / 1500"
+              },
+              {
+                "file": "les-automates_4",
+                "title": "Les Automates 4",
+                "aspectRatio": "1500 / 985"
+              },
+              {
+                "file": "les-automates_5",
+                "title": "Les Automates 5",
+                "aspectRatio": "1500 / 1000"
+              },
+              {
+                "file": "les-automates_6",
+                "title": "Les Automates 6",
+                "aspectRatio": "1024 / 1500"
+              },
+              {
+                "file": "les-automates_7",
+                "title": "Les Automates 7",
+                "aspectRatio": "1500 / 1000"
+              },
+              {
+                "file": "les-automates_adam-et-eve",
+                "title": "Les Automates - Adam et Eve",
+                "aspectRatio": "1055 / 1500"
+              },
+              {
                 "file": "taxi",
                 "title": "Taxi",
-                "aspectRatio": "965 / 1500"
+                "aspectRatio": "965 / 1500",
+                "hidden": true
               }
             ]
           },
@@ -218,14 +219,24 @@
             },
             "photos": [
               {
-                "file": "europa",
-                "title": "Europa",
-                "aspectRatio": "1500 / 911"
+                "file": "venusenmoselle",
+                "title": "Venus en Moselle",
+                "aspectRatio": "1642 / 1000"
+              },
+              {
+                "file": "legraoully",
+                "title": "Le Graoully",
+                "aspectRatio": "1595 / 1000"
               },
               {
                 "file": "finsdesiecles",
                 "title": "Fin de Siècle",
                 "aspectRatio": "1727 / 1000"
+              },
+              {
+                "file": "europa",
+                "title": "Europa",
+                "aspectRatio": "1500 / 911"
               },
               {
                 "file": "guillaume",
@@ -246,11 +257,6 @@
                 "file": "lechevalier",
                 "title": "Le Chevalier",
                 "aspectRatio": "1500 / 911"
-              },
-              {
-                "file": "legraoully",
-                "title": "Le Graoully",
-                "aspectRatio": "1595 / 1000"
               },
               {
                 "file": "leroi",
@@ -276,11 +282,6 @@
                 "file": "venus",
                 "title": "Venus",
                 "aspectRatio": "1500 / 911"
-              },
-              {
-                "file": "venusenmoselle",
-                "title": "Venus en Moselle",
-                "aspectRatio": "1642 / 1000"
               }
             ]
           },
@@ -327,57 +328,57 @@
             "photos": [
               {
                 "file": "entree-des-artistes-01",
-                "title": "",
+                "title": "Entrée des artistes 01",
                 "aspectRatio": "750 / 1000"
               },
               {
                 "file": "entree-des-artistes-02",
-                "title": "",
+                "title": "Entrée des artistes 02",
                 "aspectRatio": "1333 / 1000"
               },
               {
                 "file": "entree-des-artistes-03",
-                "title": "",
+                "title": "Entrée des artistes 03",
                 "aspectRatio": "1333 / 1000"
               },
               {
                 "file": "entree-des-artistes-04",
-                "title": "",
+                "title": "Entrée des artistes 04",
                 "aspectRatio": "1333 / 1000"
               },
               {
                 "file": "entree-des-artistes-05",
-                "title": "",
+                "title": "Entrée des artistes 05",
                 "aspectRatio": "750 / 1000"
               },
               {
                 "file": "entree-des-artistes-06",
-                "title": "",
+                "title": "Entrée des artistes 06",
                 "aspectRatio": "1333 / 1000"
               },
               {
                 "file": "entree-des-artistes-07",
-                "title": "",
+                "title": "Entrée des artistes 07",
                 "aspectRatio": "1333 / 1000"
               },
               {
                 "file": "entree-des-artistes-08",
-                "title": "",
+                "title": "Entrée des artistes 08",
                 "aspectRatio": "1333 / 1000"
               },
               {
                 "file": "entree-des-artistes-09",
-                "title": "",
+                "title": "Entrée des artistes 09",
                 "aspectRatio": "750 / 1000"
               },
               {
                 "file": "entree-des-artistes-10",
-                "title": "",
+                "title": "Entrée des artistes 10",
                 "aspectRatio": "1222 / 1000"
               },
               {
                 "file": "entree-des-artistes-11",
-                "title": "",
+                "title": "Entrée des artistes 11",
                 "aspectRatio": "1333 / 1000"
               }
             ]
@@ -390,19 +391,9 @@
             },
             "photos": [
               {
-                "file": "01_lacommune",
-                "title": "La Commune",
-                "aspectRatio": "1365 / 1000"
-              },
-              {
-                "file": "02_letombeaudessirenes",
-                "title": "Le Tombeau des Sirènes",
-                "aspectRatio": "1446 / 1000"
-              },
-              {
-                "file": "03_lesoiseauxmetalliques",
-                "title": "Les Oiseaux Métalliques",
-                "aspectRatio": "1382 / 1000"
+                "file": "05_lamortdudouglas",
+                "title": "La Mort du Douglas",
+                "aspectRatio": "1600 / 858"
               },
               {
                 "file": "04_lesamanites",
@@ -410,9 +401,19 @@
                 "aspectRatio": "1743 / 1000"
               },
               {
-                "file": "05_lamortdudouglas",
-                "title": "La Mort du Douglas",
-                "aspectRatio": "1600 / 858"
+                "file": "03_lesoiseauxmetalliques",
+                "title": "Les Oiseaux Métalliques",
+                "aspectRatio": "1382 / 1000"
+              },
+              {
+                "file": "02_letombeaudessirenes",
+                "title": "Le Tombeau des Sirènes",
+                "aspectRatio": "1446 / 1000"
+              },
+              {
+                "file": "01_lacommune",
+                "title": "La Commune",
+                "aspectRatio": "1365 / 1000"
               }
             ]
           },
@@ -423,6 +424,46 @@
 
             },
             "photos": [
+              {
+                "file": "badabim1",
+                "title": "Badabim 1",
+                "aspectRatio": "1500 / 1044"
+              },
+              {
+                "file": "badabim2",
+                "title": "Badabim 2",
+                "aspectRatio": "1500 / 1000"
+              },
+              {
+                "file": "badabim3",
+                "title": "Badabim 3",
+                "aspectRatio": "960 / 1500"
+              },
+              {
+                "file": "badabim4",
+                "title": "Badabim 4",
+                "aspectRatio": "1500 / 1076"
+              },
+              {
+                "file": "15_nowhere",
+                "title": "Nowhere",
+                "aspectRatio": "972 / 1000"
+              },
+              {
+                "file": "16_sanservolo",
+                "title": "Sanservolo",
+                "aspectRatio": "1500 / 987"
+              },
+              {
+                "file": "17_sanservolo2",
+                "title": "Sanservolo 2",
+                "aspectRatio": "667 / 1000"
+              },
+              {
+                "file": "18_sanservolo3",
+                "title": "Sanservolo 3",
+                "aspectRatio": "766 / 1000"
+              },
               {
                 "file": "01_ulrikeetblablabla",
                 "title": "Ulrik et Blablabla",
@@ -449,14 +490,14 @@
                 "aspectRatio": "1044 / 1000"
               },
               {
-                "file": "06_hoteldumidi2",
-                "title": "Hotel du Midi 2",
-                "aspectRatio": "752 / 1000"
-              },
-              {
                 "file": "07_hoteldumidi",
                 "title": "Hotel du Midi",
                 "aspectRatio": "1618 / 1000"
+              },
+              {
+                "file": "06_hoteldumidi2",
+                "title": "Hotel du Midi 2",
+                "aspectRatio": "752 / 1000"
               },
               {
                 "file": "08_hoteldumidi3",
@@ -492,47 +533,8 @@
                 "file": "14_lepalace",
                 "title": "Le Palace",
                 "aspectRatio": "1495 / 1000"
-              },
-              {
-                "file": "15_nowhere",
-                "title": "Nowhere",
-                "aspectRatio": "972 / 1000"
-              },
-              {
-                "file": "16_sanservolo",
-                "title": "Sanservolo",
-                "aspectRatio": "1500 / 987"
-              },
-              {
-                "file": "17_sanservolo2",
-                "title": "Sanservolo 2",
-                "aspectRatio": "667 / 1000"
-              },
-              {
-                "file": "18_sanservolo3",
-                "title": "Sanservolo 3",
-                "aspectRatio": "766 / 1000"
-              },
-              {
-                "file": "badabim1",
-                "title": "Badabim 1",
-                "aspectRatio": "1500 / 1044"
-              },
-              {
-                "file": "badabim2",
-                "title": "Badabim 2",
-                "aspectRatio": "1500 / 1000"
-              },
-              {
-                "file": "badabim3",
-                "title": "Badabim 3",
-                "aspectRatio": "960 / 1500"
-              },
-              {
-                "file": "badabim4",
-                "title": "Badabim 4",
-                "aspectRatio": "1500 / 1076"
               }
+              
             ]
           },
           {
@@ -642,14 +644,14 @@
                 "aspectRatio": "1529 / 1000"
               },
               {
-                "file": "14_dynaalafenetre2",
-                "title": "Dyna à la fenêtre 2",
-                "aspectRatio": "1000 / 1000"
-              },
-              {
                 "file": "15_dynaalafenetre",
                 "title": "Dyna à la fenêtre",
                 "aspectRatio": "1333 / 1000"
+              },
+              {
+                "file": "14_dynaalafenetre2",
+                "title": "Dyna à la fenêtre 2",
+                "aspectRatio": "1000 / 1000"
               },
               {
                 "file": "16_paris",
@@ -708,7 +710,8 @@
               {
                 "file": "07_Wihl",
                 "title": "Wihl",
-                "aspectRatio": "1000 / 1000"
+                "aspectRatio": "1000 / 1000",
+                "hidden": true
               },
               {
                 "file": "08_joprivatestmort",
@@ -746,7 +749,9 @@
             "id" : "salbatar-circus",
             "name" : "Salbatar Circus",
             "cover" : {
-
+              "file": "02_opening",
+              "title": "Opening",
+              "aspectRatio": "1966 / 1000"
             },
             "photos": [
               {
@@ -851,12 +856,12 @@
               },
               {
                 "file": "21_frenchlover2",
-                "title": "French Lover",
+                "title": "French Lover 2",
                 "aspectRatio": "1656 / 1000"
               },
               {
                 "file": "22_frenchlover3",
-                "title": "French Lover",
+                "title": "French Lover 3",
                 "aspectRatio": "1656 / 1000"
               },
               {
@@ -1170,9 +1175,9 @@
             "id": "artwork",
             "name": "Artwork",
             "cover": {
-                "file": "les-yeux-de-la-tete-0",
-                "title": "Les Yeux de la Tête",
-                "aspectRatio": "1106 / 1000"
+              "file": "garcon-de-plage-2",
+              "title": "Garçon de Plage",
+              "aspectRatio": "1333 / 2000"
             },
             "photos": [
               {
@@ -1400,12 +1405,12 @@
           {
             "name": "Exposition",
             "location": "au Festival Constellations à Metz",
-            "day": "Juin/Septembre 2019"
+            "day": "Juin / Septembre 2019"
           },
           {
             "name": "Exposition",
             "location": "à la Gare de l'Est à Paris",
-            "day": "Juillet/Septembre 2019"
+            "day": "Juillet / Septembre 2019"
           },
           {
             "name": "Exposition rétrospective",
@@ -1445,7 +1450,7 @@
           {
             "name": "LeTurk - Masterclass",
             "location": "au recording studio Marseille",
-            "day": "30 Octobre/1er Novembre"
+            "day": "30 Octobre / 1er Novembre 2017"
           },
           {
             "name": "Exposition / Vente",

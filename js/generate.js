@@ -122,6 +122,8 @@ initViewPort();
 
 window.onresize = () => {
   initViewPort();
+
+  checkPopinPhoto();
 }
 
 // window.addEventListener('hashchange', hashHandler, false);

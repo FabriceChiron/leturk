@@ -326,7 +326,6 @@ const getMediaPopin = (originElem, elemData, container, type) => {
     btnNext.innerText = '×';
 
     btnNext.onclick = () => {
-      // emptyContainer(popinContainer);
       originElem.nextSibling.querySelector('button').click();
     }
   }
@@ -339,15 +338,20 @@ const getMediaPopin = (originElem, elemData, container, type) => {
       class: `${viewPort}`
     });
     
-    const btnZoomImage = createElem('label', zoomButtons, {
+    const btnZoomImageMinus = createElem('label', zoomButtons, {
       for: 'zoom-image'
     });
+    btnZoomImageMinus.innerText = 'Å';
 
     const checkboxZoomImage = createElem('input', zoomButtons, {
       type: 'checkbox',
       id: 'zoom-image'
     });
-    btnZoomImage.innerText = 'Ñ';
+    
+    const btnZoomImagePlus = createElem('label', zoomButtons, {
+      for: 'zoom-image'
+    });
+    btnZoomImagePlus.innerText = 'Â';
   }
 
   const btnClosePopin = createElem('button', popinToolbar, {
@@ -363,20 +367,30 @@ const getMediaPopin = (originElem, elemData, container, type) => {
   return {mediaPopin, popinToolbar, popinContainer, zoomButtons};
 }
 
-const zoomImage = (container, imgWrapper, value) => {
+
+const zoomImage = (container, imgWrapper, image, value) => {
   container.classList.add('zoom');
-  const image = imgWrapper.querySelector('img');
   image.style = `width: ${value}px`;
-
-  imgWrapper.scrollTo((image.width - imgWrapper.offsetWidth) / 2, (image.height - imgWrapper.offsetHeight) / 2)
-
+  
+  let userScroll = false;
+ 
+  let scrollPosition = {
+    x: (image.width - imgWrapper.offsetWidth) / 2,
+    y: (image.height - imgWrapper.offsetHeight) / 2
+  }
+  
+  imgWrapper.scrollTo(scrollPosition.x, scrollPosition.y);
 }
 
 const enableZoom = (container, imgWrapper, zoomButtons) => {
   console.log(container.dataset.orientation);
   const imgData = container.dataset;
 
+  const image = imgWrapper.querySelector('img');
+
   const rangeWrapper = createElem('div', zoomButtons);
+
+  zoomButtons.insertBefore(rangeWrapper, zoomButtons.querySelector('#zoom-image').nextSibling);
 
   const zoomRange = createElem('input', rangeWrapper, {
     type: 'range',
@@ -386,8 +400,83 @@ const enableZoom = (container, imgWrapper, zoomButtons) => {
     max: `${imgData.naturalWidth}`,
   });
 
+  if(viewPort === 'desktop') {
+    image.ondblclick = () => {
+      if(zoomRange.value === zoomRange.max) {
+        zoomRange.value = zoomRange.min;
+      }
+      else {
+        zoomRange.value = zoomRange.max;
+      }
+
+      zoomImage(container, imgWrapper, image, zoomRange.value);
+    }
+  } 
+
+  // window.onresize = () => {
+
+  //   initViewPort();
+
+  //   let imageClone = image.cloneNode();
+
+  //   setAttributes(imageClone, {
+  //     style: '',
+  //     class: 'clone'
+  //   })
+
+  //   container.appendChild(imageClone);
+
+  //   setTimeout(function() {
+  //     container.dataset.initialWidth = `${imageClone.width}`;
+  //     container.dataset.initialHeight = `${imageClone.height}`;
+
+  //     zoomRange.min = `${parseInt(imageClone.width)}`;
+
+  //     imageClone.remove();
+  //     zoomImage(container, imgWrapper, image, zoomRange.value);
+  //   }, 10);
+
+
+  // }
+
   zoomRange.oninput = function() {
-    zoomImage(container, imgWrapper, zoomRange.value);
+    zoomImage(container, imgWrapper, image, zoomRange.value);
+  }
+}
+
+const checkPopinPhoto = () => {
+  const popinOpen = document.querySelector('#media-popin.open');
+
+  if(!!popinOpen) {
+    const photoInPopin = popinOpen.querySelector('.photos');
+    
+    if(!!photoInPopin) {
+      console.log(photoInPopin, !!photoInPopin);
+
+      let imgToCheck = photoInPopin.querySelector('img');
+      let wrapperImage = imgToCheck.parentElement;
+      let imageClone = imgToCheck.cloneNode();
+
+      let zoomRangeToCheck = popinOpen.querySelector('#zoom-buttons div input');
+      console.log(zoomRangeToCheck);
+
+      setAttributes(imageClone, {
+        style: '',
+        class: 'clone'
+      });
+
+      photoInPopin.appendChild(imageClone);
+
+      setTimeout(function() {
+        photoInPopin.dataset.initialWidth = `${imageClone.width}`;
+        photoInPopin.dataset.initialHeight = `${imageClone.height}`;
+
+        zoomRangeToCheck.min = `${parseInt(imageClone.width)}`;
+
+        imageClone.remove();
+        zoomImage(photoInPopin, wrapperImage, imgToCheck, zoomRangeToCheck.value);
+      }, 10);
+    }
   }
 }
 
