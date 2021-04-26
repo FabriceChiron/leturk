@@ -9,6 +9,11 @@ const generatePageGallery = (collection, mainContainer, type,) => {
     class: `photos-holder ${(viewPort === 'desktop') ? 'dragscroll' : ''}`
   });
 
+
+  if(typeof dragscroll !== undefined) {
+    dragscroll.reset();
+  }
+
   
   collection.photos.map(photo => {
     if(!photo.hidden) {
@@ -242,44 +247,42 @@ const generateContent = (content, hash, isHomepage, pageChange) => {
 
   emptyContainer(mainContainer);
 
-  console.log(mainContainer.innerHTML.length > 0);
+  content.categories.map((category, index) => {
 
-    content.categories.map((category, index) => {
-
-      if(isHomepage) {
-        if(category.onHome === true) {
-          generateSection(category, mainContainer, content, hash);
-        }
-   
-        if(index === content.categories.length - 1) {
-          console.log(`autoscroll to ${hash}`);
-          setTimeout(function() {
-            scrollToElem(`#${hash}`);
-          }, transitionSpeed * 2);
-        }
+    if(isHomepage) {
+      if(category.onHome === true) {
+        generateSection(category, mainContainer, content, hash);
       }
+ 
+      if(index === content.categories.length - 1) {
+        console.log(`autoscroll to ${hash}`);
+        setTimeout(function() {
+          scrollToElem(`#${hash}`);
+        }, transitionSpeed * 2);
+      }
+    }
+    
+    else {
+      const splitHash = hash.split('/');
       
-      else {
-        const splitHash = hash.split('/');
-        
-        if(category.type === "photos") {
+      if(category.type === "photos") {
 
-          if(category.id === splitHash[0]) {
+        if(category.id === splitHash[0]) {
 
-            category.collection.map(collection => {
-              if(collection.id === splitHash[1]) {
-                generatePageGallery(collection, mainContainer, category.type);
-              }
-            });
-          }
-        }
-        if(category.type === "agenda" && category.id === splitHash[0]) {
-          generatePageAgenda(category, mainContainer);
+          category.collection.map(collection => {
+            if(collection.id === splitHash[1]) {
+              generatePageGallery(collection, mainContainer, category.type);
+            }
+          });
         }
       }
+      if(category.type === "agenda" && category.id === splitHash[0]) {
+        generatePageAgenda(category, mainContainer);
+      }
+    }
 
 
 
-    });
+  });
 
 }

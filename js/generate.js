@@ -107,7 +107,7 @@ const generateStructure = (viewPort, hash, isHomepage, pageChange) => {
   .then(res => res.json())
   .then(data => {
 
-    console.log(pageChange);
+    // console.log(pageChange);
     generateMenu(data.content, hash, isHomepage, pageChange);
 
     generateContent(data.content, hash, isHomepage, pageChange);

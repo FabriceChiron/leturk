@@ -219,6 +219,7 @@ const getAspectRatio = (img, zoomButtons) => {
   container.dataset.naturalHeight = `${imgHeight}`;
   container.dataset.initialWidth = `${imgInitialWidth}`;
   container.dataset.initialHeight = `${imgInitialHeight}`;
+  // container.style = `--max-width: ${imgWidth}px; --max-height: ${imgHeight}px;` 
 
   if(img.naturalWidth === 0) {
     setTimeout(function(){
@@ -451,14 +452,12 @@ const checkPopinPhoto = () => {
     const photoInPopin = popinOpen.querySelector('.photos');
     
     if(!!photoInPopin) {
-      console.log(photoInPopin, !!photoInPopin);
 
       let imgToCheck = photoInPopin.querySelector('img');
       let wrapperImage = imgToCheck.parentElement;
       let imageClone = imgToCheck.cloneNode();
 
       let zoomRangeToCheck = popinOpen.querySelector('#zoom-buttons div input');
-      console.log(zoomRangeToCheck);
 
       setAttributes(imageClone, {
         style: '',
@@ -508,7 +507,58 @@ const insertContentInPopin = (elemData, type, container, originElem, zoomButtons
   }
 }
 
+const scrollToCenter = (elem, container) => {
+  let scroller;
+  
+  if(viewPort === 'mobile') {
+    scroller = document.querySelector('#main-container');
+
+    
+    if(isHomepage) {
+      console.log(elem.offsetTop, elem.parentElement.parentElement.offsetTop);
+      console.log(scroller.scrollTop);
+
+      scroller.scroll({
+        left: 0, 
+        top: elem.offsetTop + elem.parentElement.parentElement.offsetTop - ((scroller.offsetHeight - elem.offsetHeight) / 2),
+        behavior: 'smooth'
+      });
+    }
+
+    else {
+      scroller.scroll({
+        left: 0, 
+        top: elem.offsetTop - ((scroller.offsetHeight - elem.offsetHeight) / 2),
+        behavior: 'smooth'
+      });
+    }
+    // scroller = elem.parentElement;
+    /*scroller.scrollTo(0, elem.offsetTop - ((window.innerHeight - elem.offsetheight) / 2) + 10);*/
+  }
+
+  else {
+    if(isHomepage) {
+      scroller = window;
+      scroller.scroll({
+        left: 0, 
+        top: elem.offsetTop + elem.parentElement.parentElement.offsetTop - ((window.innerHeight - elem.offsetHeight) / 2),
+        behavior: 'smooth'
+      });
+    }
+
+    else {
+      scroller = elem.parentElement;
+      scroller.scroll({
+        left: elem.offsetLeft - ((window.innerWidth - elem.offsetWidth) / 2) + 10, 
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  }
+}
+
 const toPopin = (originElem, elemData, container, type) => {
+
 
   const popin = getMediaPopin(originElem, elemData, container, type);
 
@@ -516,12 +566,15 @@ const toPopin = (originElem, elemData, container, type) => {
 
   insertContentInPopin(elemData, type, popin.popinContainer, originElem, popin.zoomButtons);
 
-  toggleScroll(pageScroller, 'disable');
+  // toggleScroll(pageScroller, 'disable');
 
   if(!popin.mediaPopin.classList.contains('open')){
     setTimeout(function() {
+      scrollToCenter(originElem, container);
       popin.mediaPopin.classList.add('open');
     }, transitionSpeed);
+  } else {
+    scrollToCenter(originElem, container);
   }
 
 }
