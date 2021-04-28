@@ -512,12 +512,8 @@ const scrollToCenter = (elem, container) => {
   
   if(viewPort === 'mobile') {
     scroller = document.querySelector('#main-container');
-
     
     if(isHomepage) {
-      console.log(elem.offsetTop, elem.parentElement.parentElement.offsetTop);
-      console.log(scroller.scrollTop);
-
       scroller.scroll({
         left: 0, 
         top: elem.offsetTop + elem.parentElement.parentElement.offsetTop - ((scroller.offsetHeight - elem.offsetHeight) / 2),
@@ -532,8 +528,6 @@ const scrollToCenter = (elem, container) => {
         behavior: 'smooth'
       });
     }
-    // scroller = elem.parentElement;
-    /*scroller.scrollTo(0, elem.offsetTop - ((window.innerHeight - elem.offsetheight) / 2) + 10);*/
   }
 
   else {
@@ -547,7 +541,7 @@ const scrollToCenter = (elem, container) => {
     }
 
     else {
-      scroller = elem.parentElement;
+      scroller = elem.parentElement.parentElement;
       scroller.scroll({
         left: elem.offsetLeft - ((window.innerWidth - elem.offsetWidth) / 2) + 10, 
         top: 0,
@@ -565,8 +559,6 @@ const toPopin = (originElem, elemData, container, type) => {
   emptyContainer(popin.popinContainer);
 
   insertContentInPopin(elemData, type, popin.popinContainer, originElem, popin.zoomButtons);
-
-  // toggleScroll(pageScroller, 'disable');
 
   if(!popin.mediaPopin.classList.contains('open')){
     setTimeout(function() {

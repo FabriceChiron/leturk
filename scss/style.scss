@@ -892,6 +892,10 @@ a {
     box-sizing: border-box;
     // padding: 0 0 10px;
 
+    .photos-wrapper {
+      display: flex; 
+    }
+
 
     .photo-tile {
       position: relative;
@@ -1091,6 +1095,10 @@ a {
       flex-direction: column;
       margin: 0 10px;
       padding-bottom: 10px;
+
+      .photos-wrapper {
+        flex-direction: column;
+      }
 
 
       .photo-tile {

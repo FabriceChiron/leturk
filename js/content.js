@@ -9,21 +9,44 @@ const generatePageGallery = (collection, mainContainer, type,) => {
     class: `photos-holder ${(viewPort === 'desktop') ? 'dragscroll' : ''}`
   });
 
+  const photosWrapper = createElem('div', photosHolder, {
+    class: `photos-wrapper`
+  });
+
 
   if(typeof dragscroll !== undefined) {
     dragscroll.reset();
   }
 
+
+  collection.photos.map((photo, index) => {
+    if(photo.hidden === true) {
+      collection.photos.splice(index, 1);
+    }
+  });
+
+  let arrayImgAddWidth = [];
   
-  collection.photos.map(photo => {
+  collection.photos.map((photo, index) => {
     if(!photo.hidden) {
-      const photoTile = createElem('div', photosHolder, {
+      const photoTile = createElem('div', photosWrapper, {
         class: 'photo-tile'
       });
 
       const tileImage = createElem('img', photoTile, {
         style: `aspect-ratio: ${photo.aspectRatio}`
       });
+      let previousImgWidth;
+      if(index > 0) {
+        previousImgWidth = arrayImgAddWidth[index-1];
+      }
+      else {
+        previousImgWidth = 0;
+      }
+      console.log(photo.aspectRatio);
+      console.log(previousImgWidth, parseInt(photo.aspectRatio.split(' / ')[0]), previousImgWidth + parseInt(photo.aspectRatio.split(' / ')[0]));
+      arrayImgAddWidth.push( previousImgWidth + parseInt(photo.aspectRatio.split(' / ')[0]) );
+
       createImage(tileImage, `${imagesRoot}/${imagesFolder}/${collection.id}/default/${photo.file}.jpg`, null);
 
       const infosImage = createElem('div', photoTile, {
@@ -60,8 +83,14 @@ const generatePageGallery = (collection, mainContainer, type,) => {
           toPopin(photoTile, collection, document.body, type);
         }
       } 
+  
+      if(index === collection.photos.length - 1) {
+      }
     }
+
   });
+  
+  console.log(arrayImgAddWidth);
 }
 
 const generateSection = (category, mainContainer, content, hash) => {
