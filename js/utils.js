@@ -315,8 +315,11 @@ const getMediaPopin = (originElem, elemData, container, type) => {
     btnPrevious.innerText = 'Ô';
 
     btnPrevious.onclick = () => {
-      // emptyContainer(popinContainer);
-      originElem.previousSibling.querySelector('button').click();
+      if(originElem.previousSibling.tagName === 'BR') {
+        originElem.previousSibling.previousSibling.querySelector('button').click();
+      } else {
+        originElem.previousSibling.querySelector('button').click();
+      }
     }
   }
   if(originElem.nextSibling) {
@@ -327,7 +330,11 @@ const getMediaPopin = (originElem, elemData, container, type) => {
     btnNext.innerText = '×';
 
     btnNext.onclick = () => {
-      originElem.nextSibling.querySelector('button').click();
+      if(originElem.nextSibling.tagName === 'BR') {
+        originElem.nextSibling.nextSibling.querySelector('button').click();
+      } else {
+        originElem.nextSibling.querySelector('button').click();
+      }
     }
   }
 
@@ -400,6 +407,10 @@ const enableZoom = (container, imgWrapper, zoomButtons) => {
     value: `${imgData.initialWidth}`,
     max: `${imgData.naturalWidth}`,
   });
+
+  if(parseInt(imgData.initialWidth) < parseInt(imgData.naturalWidth)) {
+    zoomButtons.classList.add('show');
+  }
 
   if(viewPort === 'desktop') {
     image.ondblclick = () => {
@@ -582,18 +593,42 @@ const prepareGalleryForSplit = (arrayImgAddWidth, fullWrapperWidth, photosHolder
   const getMedianElem = () =>{
     let medianElem;
 
+    const threshold = 1.9;
+
     for (var i = 0; i < arrayImgAddWidth.length; i++) {
-      if(fullWrapperWidth / arrayImgAddWidth[i] < 1.9) {
-        console.log(fullWrapperWidth / arrayImgAddWidth[i]);
-        medianElem = i;
+      if(fullWrapperWidth / arrayImgAddWidth[i] < threshold) {
+        /*console.log(Math.abs((fullWrapperWidth / arrayImgAddWidth[i-1]) - threshold));
+        console.log(Math.abs((fullWrapperWidth / arrayImgAddWidth[i]) - threshold));
+        
+        
+
+        if(Math.abs((fullWrapperWidth / arrayImgAddWidth[i-1]) - threshold) < Math.abs((fullWrapperWidth / arrayImgAddWidth[i]) - threshold)) {
+          
+          if(Math.abs((fullWrapperWidth / arrayImgAddWidth[i-1]) - threshold) < 0.005) {
+            medianElem = i;
+          }
+          else {
+            medianElem = i-1;
+          }
+        }
+
+        else {
+          medianElem = i;
+        }*/
+
+        console.log(Math.abs((fullWrapperWidth / arrayImgAddWidth[i-1]) - threshold));
+        console.log(Math.abs((fullWrapperWidth / arrayImgAddWidth[i]) - threshold));
+
+        // medianElem = i;
+
+        medianElem = (Math.abs((fullWrapperWidth / arrayImgAddWidth[i-1]) - threshold) < Math.abs((fullWrapperWidth / arrayImgAddWidth[i]) - threshold)) ? i-1 : i;
+
         return medianElem;
       }
     }
 
     return medianElem;
   }
-
-  console.log(getMedianElem());
 
   const lastElemOnRow = photosHolder.querySelectorAll('.photo-tile').item( getMedianElem() );
 
@@ -611,7 +646,7 @@ const splitPhotosInRows = () => {
   if(photosWrapper) {
     if(photosWrapper.offsetHeight > 1000) {
       photosWrapper.classList.add('split');
-      if(photosWrapper.offsetWidth < photosWrapper.parentElement.offsetWidth) {
+      if(photosWrapper.offsetWidth < window.innerWidth) {
         photosWrapper.classList.remove('split');  
       }
     }

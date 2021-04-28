@@ -340,10 +340,14 @@ body {
     #zoom-buttons {
       top: 0;
       left: 0;
-      display: flex;
+      display: none;
       align-items: stretch;
       transition: all var(--transitionSpeed) ease-out;
       font-size: 30px;
+
+      &.show {
+        display: flex;
+      }
 
       input[type="checkbox"]{
         display: none;
@@ -926,6 +930,11 @@ a {
         right: 10px;
         color: #fff;
         background: rgba(40, 40, 40, 0.1);
+        transition: all var(--transitionSpeed) ease-out;
+
+        &:hover {
+          background: rgba(40, 40, 40, 0.3);
+        }
       }
 
       .toolbar {
