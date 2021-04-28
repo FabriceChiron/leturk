@@ -1178,6 +1178,24 @@ a {
       overflow-x: auto;
       padding-bottom: 10px;
 
+      .split {
+        // flex-wrap: wrap;
+        height: calc(100% + 10px);
+        margin-bottom: -10px;
+        display: block;
+        white-space: nowrap;
+        font-size: 0;
+
+        .photo-tile {
+          height: calc(50% - 10px);
+          display: inline-block;
+          margin-bottom: 10px;
+
+          &.last-on-row {
+            margin-right: 0;
+          }
+        }
+      }
 
       .photo-tile {
         height: 100%;

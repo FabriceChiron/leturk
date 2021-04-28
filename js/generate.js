@@ -122,7 +122,7 @@ initViewPort();
 
 window.onresize = () => {
   initViewPort();
-
+  splitPhotosInRows();
   checkPopinPhoto();
 }
 

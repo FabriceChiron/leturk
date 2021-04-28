@@ -571,6 +571,55 @@ const toPopin = (originElem, elemData, container, type) => {
 
 }
 
+const prepareGalleryForSplit = (arrayImgAddWidth, fullWrapperWidth, photosHolder) => {
+
+
+  console.log(fullWrapperWidth);
+  console.log(arrayImgAddWidth);
+  
+  const photosWrapper = photosHolder.childNodes.item(0);
+
+  const getMedianElem = () =>{
+    let medianElem;
+
+    for (var i = 0; i < arrayImgAddWidth.length; i++) {
+      if(fullWrapperWidth / arrayImgAddWidth[i] < 1.9) {
+        console.log(fullWrapperWidth / arrayImgAddWidth[i]);
+        medianElem = i;
+        return medianElem;
+      }
+    }
+
+    return medianElem;
+  }
+
+  console.log(getMedianElem());
+
+  const lastElemOnRow = photosHolder.querySelectorAll('.photo-tile').item( getMedianElem() );
+
+  lastElemOnRow.classList.add('last-on-row');
+
+  const lineBreak = document.createElement('br');
+
+  photosWrapper.insertBefore(lineBreak, lastElemOnRow.nextSibling);
+
+}
+
+const splitPhotosInRows = () => {
+  const photosWrapper = document.querySelector('#main-container .photos-wrapper');
+
+  if(photosWrapper) {
+    if(photosWrapper.offsetHeight > 1000) {
+      photosWrapper.classList.add('split');
+      if(photosWrapper.offsetWidth < photosWrapper.parentElement.offsetWidth) {
+        photosWrapper.classList.remove('split');  
+      }
+    }
+    else {
+      photosWrapper.classList.remove('split');
+    }
+  }
+}
 
 const scrollToElem = (hash) => {
   

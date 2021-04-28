@@ -43,8 +43,7 @@ const generatePageGallery = (collection, mainContainer, type,) => {
       else {
         previousImgWidth = 0;
       }
-      console.log(photo.aspectRatio);
-      console.log(previousImgWidth, parseInt(photo.aspectRatio.split(' / ')[0]), previousImgWidth + parseInt(photo.aspectRatio.split(' / ')[0]));
+      
       arrayImgAddWidth.push( previousImgWidth + parseInt(photo.aspectRatio.split(' / ')[0]) );
 
       createImage(tileImage, `${imagesRoot}/${imagesFolder}/${collection.id}/default/${photo.file}.jpg`, null);
@@ -90,7 +89,14 @@ const generatePageGallery = (collection, mainContainer, type,) => {
 
   });
   
-  console.log(arrayImgAddWidth);
+  const fullWrapperWidth = arrayImgAddWidth[arrayImgAddWidth.length - 1];
+
+  prepareGalleryForSplit(arrayImgAddWidth, fullWrapperWidth, photosHolder);
+  
+  if(photosHolder.offsetHeight >= 1000 && viewPort === "desktop") {
+    splitPhotosInRows();
+  }
+
 }
 
 const generateSection = (category, mainContainer, content, hash) => {
