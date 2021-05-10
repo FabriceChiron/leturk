@@ -496,7 +496,10 @@ const insertContentInPopin = (elemData, type, container, originElem, zoomButtons
 
   switch(type) {
     case 'videos':
-      popinContent = createElem('iframe', container, {
+      popinContent = createElem('div',  container, {
+        class: 'iframe-wrapper'
+      });
+      elemVideo = createElem('iframe', popinContent, {
         src: elemData.url,
         webkitallowfullscreen: "",
         mozallowfullscreen: "",
