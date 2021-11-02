@@ -1,0 +1,226 @@
+#ulule {
+    background-color: rgba(0, 0, 0, 0.25);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 80vw;
+    height: 80vh;
+    transform: translate3d(-50%, -50%, 0) scale(0);
+    background-image: url(../images/livre/simulation-livre.jpg);
+    background-position: bottom;
+    z-index: 10;
+    box-shadow: 0 0 0px 20px rgba(0, 0, 0, 0.65);
+    background-size: cover;
+    transition: all .25s ease-out;
+    opacity: 0;
+
+    &.show {
+        transform: translate3d(-50%, -50%, 0) scale(1);
+        opacity: 1;
+    }
+
+    #close-ulule {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin: 10px;
+        cursor: pointer;
+        z-index: 2;
+        font-family: inherit;
+        font-size: 1em;
+        background: rgba(0,0,0,.25);
+        width: auto;
+        padding: 10px;
+        line-height: 1;
+        height: auto;
+        color: #fff;
+    }
+
+    & > img {
+        height: 100%;
+        visibility: hidden;
+    }
+
+    & > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* display: flex; */
+        justify-content: center;
+        text-align: center;
+
+        & > span {
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+/*             
+            @media (orientation:landscape){
+                height: 22%;
+            } */
+
+            h2 {
+                margin: 0;
+                margin-top: 20px;
+                font-weight: 600;
+                /* text-transform: none; */
+                background: rgba(0,0,0,.66);
+                padding: .2em .5em;
+            }
+        }
+
+         .img-title {
+            height: 100%;
+            max-width: 90%;
+
+            /* @media (orientation:portrait){
+                display: none;
+            } */
+        }
+    }
+
+    .ulule-link {
+        /* width: 30%; */
+        font-size: 1em;
+        background: rgba(0, 0, 0, 0.66);
+        padding: 10px;
+        text-transform: none;
+        display: flex;
+        flex-direction: column;
+
+        /* @media (orientation:landscape){
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        } */
+
+
+        img {
+            height: 50px;
+            display: block;
+            margin: 5px auto 0;
+            background: #fff;
+            padding: 5px;
+        }
+    }
+}
+
+.mobile #ulule {
+    box-shadow: 0 0 0px 10vh rgba(0, 0, 0, 0.65);
+
+    & > img {
+    }
+    
+    & > div {
+
+        & > span {
+            
+
+            h2 {
+                margin: 0;
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+        .img-title {
+            display: none;
+        }
+    }
+    
+    .ulule-link {
+        
+
+        img {
+        }
+    }
+}
+
+.desktop #ulule {
+    box-shadow: 0 0 0px 20px rgba(0, 0, 0, 0.65);
+
+    & > img {
+    }
+    
+    & > div {
+
+        & > span {
+            height: 22%;
+            padding: 20px 0 0;
+
+            h2 {
+            }
+        }
+        .img-title {
+        }
+    }
+    
+    .ulule-link {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+
+        img {
+        }
+    }
+}
+
+#ulule-strip {
+    padding: 10px;
+    text-transform: none;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: none;
+    cursor: pointer;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &.show {
+        display: flex;
+    }
+
+    span {
+        margin-right: 10px;
+        text-transform: uppercase;
+    }
+
+    img {
+        margin-left: 10px;
+        width: 50px;
+        height: auto;
+        background: #fff;
+        padding: 3px;
+    }
+}
+
+.mobile #ulule-strip {
+    
+
+    span {
+        display: block;
+        margin: 0;
+    }
+}
+
+.desktop #ulule-strip {
+    background: rgba(0, 0, 0, 0.65);
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    transition: all .25s ease-out;
+    opacity: .2;
+    z-index: 1;
+    
+    &.show {
+        display: flex;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+}

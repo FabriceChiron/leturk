@@ -21,6 +21,8 @@ const handleScroll = (pageScroller) => {
 
       if(isHomepage === true) {
 
+        // highLightSectionLink(pageScroller, mainContainer);
+
         if(mainContainer.scrollTop > 0) {
           mainContainer.querySelector('#home .logo-link').classList.add('hide')
         }
@@ -34,6 +36,8 @@ const handleScroll = (pageScroller) => {
       
       if(isHomepage === true) {
         const headerLogo = header.querySelector('.logo-link');
+
+        // highLightSectionLink(pageScroller, mainContainer);
         
         if(homeLogo) {
           if(homeLogo.getBoundingClientRect().top >= header.getBoundingClientRect().top) {

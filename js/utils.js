@@ -96,6 +96,23 @@ const toggleLinksHighLight = (hash) => {
   })
 }
 
+const highLightSectionLink = (pageScroller, mainContainer) => {
+
+  [...document.querySelectorAll('section')].map(section => {
+    if(section.getBoundingClientRect().top <= 1) {
+      [...document.querySelectorAll('#menu > li > span > a')].map(topLink => {
+        topLink.classList.remove('active');
+
+        if(topLink.getAttribute('href') === `#${section.id}`) {
+          topLink.classList.add('active');
+        }
+      });
+
+    }
+  })
+
+}
+
 const generateMenuLink = (group, item, path, hash) => {
 
   let menuLink = createElem('a', item, {

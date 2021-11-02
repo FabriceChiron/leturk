@@ -125,6 +125,8 @@ const generateSection = (category, mainContainer, content, hash) => {
 
       generateLogoLink(categorySection, category, hash, content.categories[0].id);
 
+      
+
       // jQuery Hack for non-chromium browsers;
       // dirtyHack();
           
