@@ -125,8 +125,6 @@ const generateSection = (category, mainContainer, content, hash) => {
 
       generateLogoLink(categorySection, category, hash, content.categories[0].id);
 
-      
-
       // jQuery Hack for non-chromium browsers;
       // dirtyHack();
           
@@ -272,8 +270,25 @@ const generatePageAgenda = (category, mainContainer) => {
   })
 }
 
+const generateFooter = (container, viewPort) => {
 
-const generateContent = (content, hash, isHomepage, pageChange) => {
+  if(document.querySelector("#footer")){
+    document.querySelector("#footer").remove();
+  }
+
+  const footer = createElem('footer', container, {
+    id: "footer"
+  });
+
+  footer.innerHTML += `<ul>
+    <li><a href="#" target="_blank">&#228;</a></li>
+    <li><a href="#" target="_blank">ç</a></li>
+    <li><a href="#" target="_blank">ë</a></li>
+  </ul>`
+}
+
+
+const generateContent = (content, hash, isHomepage, pageChange, viewPort) => {
   console.log('generating content');
 
   const mainContainer = document.querySelector('#main-container');
@@ -318,8 +333,10 @@ const generateContent = (content, hash, isHomepage, pageChange) => {
       }
     }
 
-
-
   });
+
+  /*console.log("generateFooter");
+  // generateFooter((viewPort != "mobile") ? mainContainer : document.body);
+  generateFooter(document.body);*/
 
 }

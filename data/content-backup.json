@@ -34,11 +34,10 @@
           {
             "id" : "la-garenne-du-prince",
             "name" : "La Garenne du Prince",
-            "highlight": true,
             "cover" : {
-              "file": "bunny-club",
-              "title": "Bunny Club",
-              "aspectRatio": "2500 / 1667"
+              "file": "haloween-1",
+              "title": "Haloween 1",
+              "aspectRatio": "2000 / 1333"
             },
             "photos": [
               {
@@ -247,6 +246,7 @@
           {
             "id" : "ode-a-metz",
             "name" : "Ode A Metz",
+            "highlight": true,
             "cover" : {
               "file": "legraoully",
               "title": "Le Graoully",
@@ -1373,15 +1373,126 @@
         "url": "https://www.leturkshop.com/"
       },
       {
+        "id": "agenda",
+        "name": "Agenda",
+        "type": "agenda",
+        "background": "agenda",
+        "collection": [
+          {
+            "name": "Exposition Artplexe",
+            "location": "à Marseille",
+            "day": "Octobre 2021"
+          },
+          {
+            "name": "Masterclass",
+            "location": "à l'Atelier",
+            "day": "18 et 19 Septembre 2021",
+            "link": {
+              "text": "Infos et Réservations",
+              "url": "https://www.leturkshop.com/masterclass"
+            }
+          },
+          {
+            "name": "Youtube Live",
+            "location": "sur Adobe France",
+            "day": "18 Mars 2020"
+          },
+          {
+            "name": "Masterclass",
+            "location": "à Toulouse",
+            "day": "14 et 15 Mars 2020"
+          },
+          {
+            "name": "Masterclass",
+            "location": "à Cheverny",
+            "day": "15 et 16 Février"
+          },
+          {
+            "name": "Masterclass de 5 jours",
+            "location": "à l'Atelier Charles à Metz",
+            "day": "16 au 20 Décembre 2019",
+            "link": {
+              "text": "Infos et Réservations",
+              "url": "https://www.atelier-charles.fr/masterclass-le-turk/?fbclid=IwAR1w1RFdu-vdg56bDwfqxTfZSW9FUDJdYcV9IHe0Xb-E-UWcFjo08Dpx3BU"
+            }
+          },
+          {
+            "name": "Shooting / workshop public en partenariat avec Canon",
+            "location": "chez Numériphot à Toulouse",
+            "day": "27 et 28 Novembre 2019"
+          },
+          {
+            "name": "Exposition",
+            "location": "au Festival Constellations à Metz",
+            "day": "Juin / Septembre 2019"
+          },
+          {
+            "name": "Exposition",
+            "location": "à la Gare de l'Est à Paris",
+            "day": "Juillet / Septembre 2019"
+          },
+          {
+            "name": "Exposition rétrospective",
+            "location": "à la Basilique Saint Vincent de Metz",
+            "day": "Mai 2019"
+          },
+          {
+            "name": "Masterclass construction de décors",
+            "location": "à Metz",
+            "day": "6 Avril 2019"
+          },
+          {
+            "name": "Masterclass pendant le Venezia PHOTO",
+            "location": "à Venise",
+            "day": "25/28 Avril 2019"
+          },
+          {
+            "name": "Résidence dans le cadre du Festival \"Photographie mon Amour\"",
+            "location": "à Metz",
+            "day": "Février / Avril 2019"
+          },
+          {
+            "name": "Masterclass construction de décors",
+            "location": "à Paris",
+            "day": "27 Octobre 2018"
+          },
+          {
+            "name": "Masterclass",
+            "location": "à l'Atelier Fenky, en Alsace",
+            "day": "16 Décembre 2017"
+          },
+          {
+            "name": "Salon de la Photo - Séance photo publique - Interviews - Dédicaces",
+            "location": "Au stand Normal Magazine",
+            "day": "11 Novembre 2017"
+          },
+          {
+            "name": "LeTurk - Masterclass",
+            "location": "au recording studio Marseille",
+            "day": "30 Octobre / 1er Novembre 2017"
+          },
+          {
+            "name": "Exposition / Vente",
+            "location": "à la VAGUE Saint-Paul",
+            "day": "Juillet 2017 / Septembre 2017"
+          },
+          {
+            "name": "Exposition pour le French May à La Galerie - Paris 1839",
+            "location": "Hong-Kong",
+            "day": "Mai 2017"
+          },
+          {
+            "name": "Masterclass",
+            "location": "à Paris",
+            "day": "29 Avril 2017"
+          }
+        ]
+      },
+      {
         "id": "contact",
         "name": "@",
         "type": "link",
         "url": "mailto:contact@leturk.com"
-      },
-      {
-        "id": "blank",
-        "name": "",
-        "type": "blank"
       }
     ]
   }

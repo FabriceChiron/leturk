@@ -1111,7 +1111,7 @@ a {
       overflow-y: auto;
       flex-direction: column;
       margin: 0 10px;
-      padding-bottom: 10px;
+      // padding-bottom: 10px;
 
       .photos-wrapper {
         flex-direction: column;
@@ -1193,18 +1193,22 @@ a {
       margin: 0 10px;
       position: absolute;
       overflow-x: auto;
-      padding-bottom: 10px;
+      // padding-bottom: 10px;
 
       .split {
         // flex-wrap: wrap;
-        height: calc(100% + 10px);
-        margin-bottom: -10px;
+        /* height: calc(100% + 10px);
+        margin-bottom: -10px; */
         display: block;
         white-space: nowrap;
         font-size: 0;
 
+        br ~ .photo-tile {
+          margin-bottom: 0;
+        }
+
         .photo-tile {
-          height: calc(50% - 10px);
+          height: calc(50% - 5px);
           display: inline-block;
           margin-bottom: 10px;
 
@@ -1401,7 +1405,27 @@ a {
 
   }
 
+}
 
 
+
+
+footer {
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.5em;
+    
+    a {
+      font-family: "WebSymbolsLigaRegular";
+      text-transform: none;
+    }
+  }
 
 }

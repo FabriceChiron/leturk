@@ -110,7 +110,7 @@ const generateStructure = (viewPort, hash, isHomepage, pageChange) => {
     // console.log(pageChange);
     generateMenu(data.content, hash, isHomepage, pageChange);
 
-    generateContent(data.content, hash, isHomepage, pageChange);
+    generateContent(data.content, hash, isHomepage, pageChange, viewPort);
   });
 
 }

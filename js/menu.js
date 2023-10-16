@@ -40,36 +40,43 @@ generateMenu = (content, hash, isHomepage, pageChange) => {
           generateLogoLink(navHolder, category);
         } else {
           
-          let catLinkContainer = createElem('span', catElem);
-          generateMenuLink(category, catLinkContainer, category.id, hash);
-          
-          if(category.type === "photos" && category.collection.length > 0) {
-            if(viewPort === 'mobile') {
-              let collectionInput = createElem('input', catElem, {
-                type: 'checkbox',
-                id: `toggle-${category.id}`
-              }, 'prepend');
+          if(category.type != "blank"){
+            
+            let catLinkContainer = createElem('span', catElem);
+            generateMenuLink(category, catLinkContainer, category.id, hash);
+            
+            if(category.type === "photos" && category.collection.length > 0) {
+              if(viewPort === 'mobile') {
+                let collectionInput = createElem('input', catElem, {
+                  type: 'checkbox',
+                  id: `toggle-${category.id}`
+                }, 'prepend');
 
-              let collectionBtn = createElem('label', catLinkContainer, {
-                for: `toggle-${category.id}`
+                let collectionBtn = createElem('label', catLinkContainer, {
+                  for: `toggle-${category.id}`
+                });
+              }
+              let collectionContainer = createElem('div', catElem);
+              let collectionHolder = createElem('ul', collectionContainer);
+
+              category.collection.map(collectionItem => {
+                let collectionElem = createElem('li', collectionHolder, {
+                  id: `${collectionItem.id}`
+                });
+                generateMenuLink(collectionItem, collectionElem, `${category.id}/${collectionItem.id}`, hash);
               });
             }
-            let collectionContainer = createElem('div', catElem);
-            let collectionHolder = createElem('ul', collectionContainer);
 
-            category.collection.map(collectionItem => {
-              let collectionElem = createElem('li', collectionHolder, {
-                id: `${collectionItem.id}`
-              });
-              generateMenuLink(collectionItem, collectionElem, `${category.id}/${collectionItem.id}`, hash);
-            });
           }
+
 
         }
 
       }
 
     })
+
+    console.log(`content.categories.length: ${content.categories.length}`);
 
   }
 }
